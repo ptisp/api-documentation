@@ -1,0 +1,58 @@
+{
+  "apiVersion": "2.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "/",
+  "resourcePath": "/domains",
+  "produces": [
+    "application/json"
+  ],
+  "authorizations": {
+
+  },
+  "apis": [
+    {
+      "path": "/user/balance",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get credit balance.",
+          "notes": "",
+          "type": {"result": "ok", "balance": 10.00},
+          "nickname": "domainInfo",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          ],
+          "responseMessages": [
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/user/contacts",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get user's contacts.",
+          "notes": "",
+          "type": {"result": "ok", "contacts": []},
+          "nickname": "domainEpp",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          ],
+          "responseMessages": [
+          ]
+        }
+      ]
+    }
+  ],
+  "models": {
+  }
+}

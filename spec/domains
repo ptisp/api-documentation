@@ -1,0 +1,470 @@
+{
+  "apiVersion": "2.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "/",
+  "resourcePath": "/domains",
+  "produces": [
+    "application/json"
+  ],
+  "authorizations": {
+
+  },
+  "apis": [
+    {
+      "path": "/domains/{domain}/info",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get the specified domain's details.",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "data":{
+              "ns":[
+                "ns1.almouroltec.com.",
+                "ns2.almouroltec.com."
+              ],
+              "expires":"2013-03-01",
+              "status":"ok",
+              "domain":"almouroltec.pt"
+            }
+          },
+          "nickname": "domainInfo",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain to get the info from",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/domains/{domain}/epp",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get domain's epp code.",
+          "notes": "",
+          "type": {"result": "ok", "authcode": "authcode..."},
+          "nickname": "domainEpp",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain to get the info from",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            },
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"domain/registrar not found\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/domains/{domain}/contacts/info",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get domain's contacts info.",
+          "notes": "",
+          "type": {"result": "ok", "contact": "..."},
+          "nickname": "domainContacts",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain to get the info from",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/domains/{domain}/check",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Verify domain availability.",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "available":"true"
+          },
+          "nickname": "domainContacts",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain to get the info from",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/domains/list",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get your domain list.",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "domains":[]
+          },
+          "nickname": "domainList",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/domains/{domain}/register/{years}",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Register the specified domain",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "data":"registered"
+          },
+          "nickname": "registerDomain",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain to be registered",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "years",
+              "description": "Years to be registered for",
+              "required": true,
+              "type": "integer",
+              "paramType": "path"
+            },
+            {
+              "name": "ns",
+              "description": "Nameserver",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "contact",
+              "description": "Owner nic-handle. (.PT tld only)",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            },
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"tld not found\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/domains/{domain}/renew/{years}",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Renew the specified domain",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "data":"renewed"
+          },
+          "nickname": "renewDomain",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain to be renewed",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "years",
+              "description": "Years to be renewed for",
+              "required": true,
+              "type": "integer",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/domains/{domain}/contacts/create",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Create a new contact for the specified domain's TLd",
+          "notes": "",
+          "type": {"result": "ok", "nichandle": "nichandle..."},
+          "nickname": "contactCreate",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain's TLd used to create te contact for",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/domains/{domain}/contacts/update/{nichandle}",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Update domain's contacts.",
+          "notes": "",
+          "type": {"result": "ok", "nichandle": "nichandle..."},
+          "nickname": "contactUpdate",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain to be updated",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "nichandle",
+              "description": "Nichandle to used in the update",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/domains/{domain}/transfer",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Transfer domain.",
+          "notes": "",
+          "type": {"result": "ok", "data": "transfered"},
+          "nickname": "transferDomain",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain to be transfered",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/domains/{domain}/protection/id/{status}",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Set the protection/lock state.",
+          "notes": "",
+          "type": {"result": "ok", "status": "status..."},
+          "nickname": "protectionDomain",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "status",
+              "description": "Lock status",
+              "required": true,
+              "type": "boolean",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            },
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"tld not supported\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/domains/{domain}/update/ns/{ns1}/{ns2}/{ns3}/{ns4}",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Update domain's nameservers.",
+          "notes": "",
+          "type": {"result": "ok", "ns": []},
+          "nickname": "updateDomain",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "ns1",
+              "description": "Nameserver1",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "ns2",
+              "description": "Nameserver2",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "ns3",
+              "description": "Nameserver3",
+              "required": false,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "ns4",
+              "description": "Nameserver4",
+              "required": false,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 400,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "models": {
+  }
+}

@@ -1,0 +1,58 @@
+{
+  "apiVersion": "2.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "/",
+  "resourcePath": "/domains",
+  "produces": [
+    "application/json"
+  ],
+  "authorizations": {
+
+  },
+  "apis": [
+    {
+      "path": "/api/version",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get current API version.",
+          "notes": "",
+          "type": {"result": "ok", "version": "2.0"},
+          "nickname": "apiVersion",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          ],
+          "responseMessages": [
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/api/format",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get API format.",
+          "notes": "",
+          "type": {"result": "ok", "format": "JSON"},
+          "nickname": "apiFormat",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          ],
+          "responseMessages": [
+          ]
+        }
+      ]
+    }
+  ],
+  "models": {
+  }
+}

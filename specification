@@ -1,0 +1,29 @@
+{
+  "apiVersion": "2.0.0",
+  "swaggerVersion": "1.2",
+  "apis": [
+    {
+      "path": "http://api.ptisp.pt/spec/domains",
+      "description": "Domains controller"
+    },
+    {
+      "path": "http://api.ptisp.pt/spec/user",
+      "description": "User controller"
+    },
+    {
+      "path": "http://api.ptisp.pt/spec/billing",
+      "description": "Billing controller"
+    },
+    {
+      "path": "http://api.ptisp.pt/spec/api",
+      "description": "API controller"
+    }
+  ],
+  "authorizations": {
+  },
+  "info": {
+    "title": "PTisp API v2",
+    "description": "API uses basic authentication, you may fetch your API Hash at <a href='https://my.ptisp.pt'>https://my.ptisp.pt</a>. All answers will use HTTP error codes accordingly and the 'result' field will always have 'ok' for successful operations and 'nok' otherwise.",
+    "contact": "dev@ptisp.pt"
+  }
+}

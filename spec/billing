@@ -1,0 +1,72 @@
+{
+  "apiVersion": "2.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "/",
+  "resourcePath": "/domains",
+  "produces": [
+    "application/json"
+  ],
+  "authorizations": {
+
+  },
+  "apis": [
+    {
+      "path": "/billing/credit/{date}",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get transactions from the specified date.",
+          "notes": "",
+          "type": {"result": "ok", "transactions": []},
+          "nickname": "domainEpp",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "date",
+              "description": "Date to get the transactions from (YYYY-MM-DD)",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/billing/invoice/{invoice}",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get invoice details.",
+          "notes": "",
+          "type": {"result": "ok", "invoice": {"items": [], "total": 10.00, "datepaid": "2011-11-11"}},
+          "nickname": "domainContacts",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "invoice",
+              "description": "Invoiceid",
+              "required": true,
+              "type": "integer",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+          ]
+        }
+      ]
+    }
+  ],
+  "models": {
+  }
+}
