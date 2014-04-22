@@ -1,8 +1,7 @@
 api-documentation
 =================
 
-Swagger based API documentation website.
+Swagger based API documentation website. - http://api.ptisp.pt
 
-(yet to be deployed)
 
-Swagger based - https://github.com/wordnik/swagger-ui
+Based on Swagger - https://github.com/wordnik/swagger-ui
