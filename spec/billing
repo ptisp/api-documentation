@@ -18,7 +18,7 @@
           "summary": "Get transactions from the specified date.",
           "notes": "",
           "type": {"result": "ok", "transactions": []},
-          "nickname": "domainEpp",
+          "nickname": "billingCredit",
           "consumes": [
             "application/json"
           ],
@@ -46,7 +46,7 @@
           "summary": "Get invoice details.",
           "notes": "",
           "type": {"result": "ok", "invoice": {"items": [], "total": 10.00, "datepaid": "2011-11-11"}},
-          "nickname": "domainContacts",
+          "nickname": "billingInvoice",
           "consumes": [
             "application/json"
           ],

@@ -18,7 +18,7 @@
           "summary": "Get credit balance.",
           "notes": "",
           "type": {"result": "ok", "balance": 10.00},
-          "nickname": "domainInfo",
+          "nickname": "userBalance",
           "consumes": [
             "application/json"
           ],
@@ -39,7 +39,28 @@
           "summary": "Get user's contacts.",
           "notes": "",
           "type": {"result": "ok", "contacts": []},
-          "nickname": "domainEpp",
+          "nickname": "userContacts",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          ],
+          "responseMessages": [
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/user/info",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get user info.",
+          "notes": "",
+          "type": {"result": "ok", "data": {}},
+          "nickname": "userInfo",
           "consumes": [
             "application/json"
           ],
