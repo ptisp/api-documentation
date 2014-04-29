@@ -295,6 +295,69 @@
               "required": true,
               "type": "string",
               "paramType": "path"
+            },
+            {
+              "name": "name",
+              "description": "Name",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "street",
+              "description": "Address street",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "postalcode",
+              "description": "Address postal code",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "country",
+              "description": "Country code (ISO)",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "phone",
+              "description": "+XXX.XXXXXXXXX",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "mail",
+              "description": "Email address",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "password",
+              "description": "Password",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "company",
+              "description": "Company name",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "vat",
+              "description": "Required for .PT",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
             }
           ],
           "responseMessages": [
@@ -358,6 +421,13 @@
               "required": true,
               "type": "string",
               "paramType": "path"
+            },
+            {
+              "name": "authcode",
+              "description": "Domain authcode",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
             }
           ],
           "responseMessages": [
