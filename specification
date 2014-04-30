@@ -3,19 +3,19 @@
   "swaggerVersion": "1.2",
   "apis": [
     {
-      "path": "http://api.ptisp.pt/spec/domains",
+      "path": "https://api.ptisp.pt/spec/domains",
       "description": "Domains controller"
     },
     {
-      "path": "http://api.ptisp.pt/spec/user",
+      "path": "https://api.ptisp.pt/spec/user",
       "description": "User controller"
     },
     {
-      "path": "http://api.ptisp.pt/spec/billing",
+      "path": "https://api.ptisp.pt/spec/billing",
       "description": "Billing controller"
     },
     {
-      "path": "http://api.ptisp.pt/spec/api",
+      "path": "https://api.ptisp.pt/spec/api",
       "description": "API controller"
     }
   ],
