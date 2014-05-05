@@ -1,0 +1,100 @@
+{
+  "apiVersion": "2.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "/",
+  "resourcePath": "/servers",
+  "produces": [
+    "application/json"
+  ],
+  "authorizations": {
+
+  },
+  "apis": [
+    {
+      "path": "/servers/dedicated/list",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Dedicated servers list.",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "products":[]
+          },
+          "nickname": "dedicatedserversList",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/servers/cloud/list",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Cloud servers list.",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "products":[]
+          },
+          "nickname": "cloudserversList",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/servers/vps/list",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "VPS list.",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "products":[]
+          },
+          "nickname": "vpsList",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "models": {
+  }
+}

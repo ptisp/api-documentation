@@ -1,0 +1,44 @@
+{
+  "apiVersion": "2.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "/",
+  "resourcePath": "/hosting",
+  "produces": [
+    "application/json"
+  ],
+  "authorizations": {
+
+  },
+  "apis": [
+    {
+      "path": "/hosting/list",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get subscribed hosting products.",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "products":[]
+          },
+          "nickname": "hostingList",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "models": {
+  }
+}

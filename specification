@@ -17,6 +17,14 @@
     {
       "path": "https://api.ptisp.pt/spec/api",
       "description": "API controller"
+    },
+    {
+      "path": "https://api.ptisp.pt/spec/hosting",
+      "description": "Hosting controller"
+    },
+    {
+      "path": "https://api.ptisp.pt/spec/servers",
+      "description": "Servers controller"
     }
   ],
   "authorizations": {
