@@ -213,7 +213,14 @@
               "paramType": "path"
             },
             {
-              "name": "ns",
+              "name": "ns/ns1",
+              "description": "Nameserver",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "ns2",
               "description": "Nameserver",
               "required": false,
               "type": "string",
