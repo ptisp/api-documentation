@@ -1,0 +1,44 @@
+{
+  "apiVersion": "2.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "/",
+  "resourcePath": "/services",
+  "produces": [
+    "application/json"
+  ],
+  "authorizations": {
+
+  },
+  "apis": [
+    {
+      "path": "/services/list",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get subscribed services.",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "products":[]
+          },
+          "nickname": "servicesList",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "models": {
+  }
+}

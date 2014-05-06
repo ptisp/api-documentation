@@ -72,6 +72,34 @@
           ]
         }
       ]
+    },
+    {
+      "path": "/user/logs",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get logs.",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "logs":[]
+          },
+          "nickname": "userLogs",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
     }
   ],
   "models": {

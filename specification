@@ -1,5 +1,5 @@
 {
-  "apiVersion": "2.0.0",
+  "apiVersion": "2.0.1",
   "swaggerVersion": "1.2",
   "apis": [
     {
@@ -25,6 +25,10 @@
     {
       "path": "https://api.ptisp.pt/spec/servers",
       "description": "Servers controller"
+    },
+    {
+      "path": "https://api.ptisp.pt/spec/services",
+      "description": "Services controller"
     }
   ],
   "authorizations": {
