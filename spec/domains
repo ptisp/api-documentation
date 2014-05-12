@@ -447,45 +447,6 @@
       ]
     },
     {
-      "path": "/domains/{domain}/protection/id/{status}",
-      "operations": [
-        {
-          "method": "POST",
-          "summary": "Set the protection/lock state.",
-          "notes": "",
-          "type": {"result": "ok", "status": "status..."},
-          "nickname": "protectionDomain",
-          "authorizations": {},
-          "parameters": [
-            {
-              "name": "domain",
-              "description": "Domain",
-              "required": true,
-              "type": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "status",
-              "description": "Lock status",
-              "required": true,
-              "type": "boolean",
-              "paramType": "path"
-            }
-          ],
-          "responseMessages": [
-            {
-              "code": 500,
-              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
-            },
-            {
-              "code": 404,
-              "message": "{\"result\": \"nok\", \"message\": \"tld not supported\"}"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "path": "/domains/{domain}/update/ns/{ns1}/{ns2}/{ns3}/{ns4}",
       "operations": [
         {
