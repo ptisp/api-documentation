@@ -38,7 +38,26 @@
           "method": "GET",
           "summary": "Get user's contacts.",
           "notes": "",
-          "type": {"result": "ok", "contacts": []},
+          "type": {
+            "result": "ok", 
+            "contacts": [
+              {
+                "id": "xxxxx",
+                "userid": "xxxx",
+                "firstname": "Chuck",
+                "email": "ChuckNorris@ptisp.pt",
+                "permissions": [
+                  "products",
+                  "email"
+                ],
+                "domainemails": "0",
+                "generalemails": "0",
+                "invoiceemails": "0",
+                "productemails": "0",
+                "supportemails": "0",
+                "affiliateemails": "0"
+              }
+            ]},
           "nickname": "userContacts",
           "consumes": [
             "application/json"
@@ -59,7 +78,33 @@
           "method": "GET",
           "summary": "Get user info.",
           "notes": "",
-          "type": {"result": "ok", "data": {}},
+          "type": {
+            "result": "ok", 
+            "data": {
+              "firstname": "Chuck",
+              "lastname": "Norris",
+              "id": "xxxxx"
+              "address": "Address",
+              "city": "City",
+              "postal": "Postal Code",
+              "country": "PT",
+              "phone": "351.707200933",
+              "language": "",
+              "email": "ChuckNorris@ptisp.pt",
+              "vat": "xxxxxxxxx",
+              "creditthreshold": "0",
+              "credit": "€9,99 EUR",
+              "productsnumactive": "2",
+              "productsnumactivehosting": "0",
+              "numactivedomains": "4",
+              "numoverdueinvoices": "69",
+              "productsnumactiveservers": "1",
+              "productsnumactivereseller": "0",
+              "productsnumactiveother": "1",
+              "numpaidinvoices": "38",
+              "lastlogin": "DD/MM/YYYY HH:MM"
+            }
+          },
           "nickname": "userInfo",
           "consumes": [
             "application/json"
@@ -82,7 +127,13 @@
           "notes": "",
           "type": {
             "result":"ok",
-            "logs":[]
+            "logs":[
+              {
+                "id": "xxxxx",
+                "date": "YYYY-MM-DD HH:MM:SS",
+                "description": "ChuckNorris.com.pt moved to PTISP"
+              }
+            ]
           },
           "nickname": "userLogs",
           "consumes": [
