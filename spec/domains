@@ -100,15 +100,15 @@
             "result": "ok", 
             "contact": 
               {
-                nic: "xxx"
-                name: "Chuck Norris"
-                street: "Address"
-                city: "City"
-                postal: "Postal-Code"
-                country: "PT"
-                email: "ChuckNorris@ptisp.pt"
-                phone: "+351.707200933"
-                company: "Company Name"
+                "nic": "xxx",
+                "name": "Chuck Norris",
+                "street": "Address",
+                "city": "City",
+                "postal": "Postal-Code",
+                "country": "PT",
+                "email": "ChuckNorris@ptisp.pt",
+                "phone": "+351.707200933",
+                "company": "Company Name"
               }
             },
           "nickname": "domainContacts",
@@ -179,14 +179,15 @@
           "notes": "",
           "type": {
             "result":"ok",
-            "domains":[
+            "domains":
+            [
               {
-                identifier: "xxxx"
-                domain: "chucknorris.com.pt"
-                expires: "YYYY-MM-DD"
-                status: "Pending"
-              }, 
-              ... ] 
+                "identifier": "xxxx",
+                "domain": "chucknorris.com.pt",
+                "expires": "YYYY-MM-DD",
+                "status": "Pending"
+              }
+            ] 
           },
           "nickname": "domainList",
           "consumes": [

@@ -19,14 +19,16 @@
           "notes": "",
           "type": {
             "result":"ok",
-            "products":[
-              { identifier: "xxxxx"
-                name: "Streaming Audio"
-                domain: "chucknorris.com.pt"
-                billingcycle: "Annually"
-                nextduedate: "YYYY-MM-DD"
-                status: "Active"
-              }, ... ]
+            "products":
+            [
+              { "identifier": "xxxxx",
+                "name": "Streaming Audio",
+                "domain": "chucknorris.com.pt",
+                "billingcycle": "Annually",
+                "nextduedate": "YYYY-MM-DD",
+                "status": "Active"
+              }
+            ]
           },
           "nickname": "servicesList",
           "consumes": [

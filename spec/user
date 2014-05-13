@@ -17,7 +17,7 @@
           "method": "GET",
           "summary": "Get credit balance.",
           "notes": "",
-          "type": {"result": "ok", "balance": 10.00},
+          "type": {"result": "ok", "balance": "10.00"},
           "nickname": "userBalance",
           "consumes": [
             "application/json"

@@ -19,14 +19,17 @@
           "notes": "",
           "type": {
             "result":"ok",
-            "products":[
-              { identifier: "xxxxx"
-                name: "Linux Profissional"
-                domain: "chucknorris.com.pt"
-                billingcycle: "Monthly"
-                nextduedate: "YYYY-MM-DD"
-                status: "Pending"
-              }, ... ] 
+            "products":
+            [
+              { 
+                "identifier": "xxxxx",
+                "name": "Linux Profissional",
+                "domain": "chucknorris.com.pt",
+                "billingcycle": "Monthly",
+                "nextduedate": "YYYY-MM-DD",
+                "status": "Pending"
+              }
+            ] 
           },
           "nickname": "hostingList",
           "consumes": [
