@@ -132,7 +132,7 @@
             "result":"ok",
             "available":"true"
           },
-          "nickname": "domainContacts",
+          "nickname": "domainCheck",
           "consumes": [
             "application/json"
           ],
