@@ -546,7 +546,7 @@
           "method": "POST",
           "summary": "Update domain's nameservers.",
           "notes": "",
-          "type": {"result": "ok", "ns": [ns1, ns2, ns3, ns4]},
+          "type": {"result": "ok", "ns": ["ns1", "ns2", "ns3", "ns4"]},
           "nickname": "updateDomain",
           "authorizations": {},
           "parameters": [
