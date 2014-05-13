@@ -65,6 +65,34 @@
           ]
         }
       ]
+    },
+    {
+      "path": "/billing/invoice/{invoice}/pay",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Pay invoice using your credit balance.",
+          "notes": "",
+          "type": {"result": "ok", "data": "invoice paid"},
+          "nickname": "payInvoice",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "invoice",
+              "description": "Invoiceid",
+              "required": true,
+              "type": "integer",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+          ]
+        }
+      ]
     }
   ],
   "models": {
