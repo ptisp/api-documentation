@@ -250,7 +250,7 @@
             },
             {
               "name": "contact",
-              "description": "Owner nic-handle. (.PT tld only)",
+              "description": "Registrant nic-handle",
               "required": false,
               "type": "string",
               "paramType": "body"
