@@ -19,7 +19,14 @@
           "notes": "",
           "type": {
             "result":"ok",
-            "products":[]
+            "products":[
+              { identifier: "xxxxx"
+                name: "Intel Core i3-4130 | 8GB DDR3 ECC | 1TB SATA 3 or 120GB SSD"
+                domain: "chucknorris.com.pt"
+                billingcycle: "Annually"
+                nextduedate: "YYYY-MM-DD"
+                status: "Pending"
+              }, ... ] 
           },
           "nickname": "dedicatedserversList",
           "consumes": [
@@ -47,7 +54,14 @@
           "notes": "",
           "type": {
             "result":"ok",
-            "products":[]
+            "products":[
+              { identifier: "xxxxx"
+                name: "Cloud Server"
+                domain: "chucknorris.com.pt"
+                billingcycle: "Semi-Annually"
+                nextduedate: "YYYY-MM-DD"
+                status: "Pending"
+              }, ... ]
           },
           "nickname": "cloudserversList",
           "consumes": [
@@ -75,7 +89,14 @@
           "notes": "",
           "type": {
             "result":"ok",
-            "products":[]
+            "products":[
+              { identifier: "xxxxx"
+                name: "VPS Windows Managed 8GB"
+                domain: "chucknorris.com.pt"
+                billingcycle: "Semi-Annually"
+                nextduedate: "YYYY-MM-DD"
+                status: "Pending"
+              }, ... ]
           },
           "nickname": "vpsList",
           "consumes": [

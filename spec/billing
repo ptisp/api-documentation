@@ -17,7 +17,18 @@
           "method": "GET",
           "summary": "Get transactions from the specified date.",
           "notes": "",
-          "type": {"result": "ok", "transactions": []},
+          "type": {
+            "result": "ok",
+            "transactions": [
+              {
+                date: "YYYY-MM-DD"
+                amount: "-9.99"
+                type: "payment"
+                invoice: "xxxx"
+                currency: "EUR"
+              }, 
+              ... ]
+            },
           "nickname": "billingCredit",
           "consumes": [
             "application/json"
@@ -45,7 +56,16 @@
           "method": "GET",
           "summary": "Get invoice details.",
           "notes": "",
-          "type": {"result": "ok", "invoice": {"items": [], "total": 10.00, "datepaid": "2011-11-11"}},
+          "type": {
+            "result": "ok", 
+            "invoice": {
+              "items": [
+                {id: "0" type: "AddFunds" description: "Add Funds" amount: "10.00" }
+                ... ], 
+            "total": 10.00, 
+            "datepaid": "YYYY-MM-DD"
+            }
+          },
           "nickname": "billingInvoice",
           "consumes": [
             "application/json"

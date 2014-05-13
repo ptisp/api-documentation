@@ -96,7 +96,21 @@
           "method": "GET",
           "summary": "Get domain's contacts info.",
           "notes": "",
-          "type": {"result": "ok", "contact": "..."},
+          "type": {
+            "result": "ok", 
+            "contact": 
+              {
+                nic: "xxx"
+                name: "Chuck Norris"
+                street: "Address"
+                city: "City"
+                postal: "Postal-Code"
+                country: "PT"
+                email: "ChuckNorris@ptisp.pt"
+                phone: "+351.707200933"
+                company: "Company Name"
+              }
+            },
           "nickname": "domainContacts",
           "consumes": [
             "application/json"
@@ -165,7 +179,14 @@
           "notes": "",
           "type": {
             "result":"ok",
-            "domains":[]
+            "domains":[
+              {
+                identifier: "xxxx"
+                domain: "chucknorris.com.pt"
+                expires: "YYYY-MM-DD"
+                status: "Pending"
+              }, 
+              ... ] 
           },
           "nickname": "domainList",
           "consumes": [
@@ -524,7 +545,7 @@
           "method": "POST",
           "summary": "Update domain's nameservers.",
           "notes": "",
-          "type": {"result": "ok", "ns": []},
+          "type": {"result": "ok", "ns": [ns1, ns2, ns3, ns4]},
           "nickname": "updateDomain",
           "authorizations": {},
           "parameters": [
