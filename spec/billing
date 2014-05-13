@@ -19,16 +19,17 @@
           "notes": "",
           "type": {
             "result": "ok",
-            "transactions": [
+            "transactions": 
+            [
               {
                 "date": "YYYY-MM-DD",
                 "amount": "-9.99",
                 "type": "payment",
                 "invoice": "xxxx",
                 "currency": "EUR"
-              }, 
-              ... ]
-            },
+              }
+            ]
+          },
           "nickname": "billingCredit",
           "consumes": [
             "application/json"
@@ -59,9 +60,10 @@
           "type": {
             "result": "ok", 
             "invoice": {
-              "items": [
-                {"id": "0", "type": "AddFunds", "description": "Add Funds", "amount": "10.00" },
-                ... ], 
+              "items": 
+                [
+                  {"id": "0", "type": "AddFunds", "description": "Add Funds", "amount": "10.00" }
+                ], 
             "total": "10.00", 
             "datepaid": "YYYY-MM-DD"
             }
