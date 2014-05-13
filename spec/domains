@@ -453,8 +453,8 @@
           "method": "POST",
           "summary": "Set the lock state.",
           "notes": "",
-          "type": {"result": "ok", "status": "status..."},
-          "nickname": "protectionDomain",
+          "type": {"result": "ok", "locked": "false"},
+          "nickname": "setDomainLock",
           "authorizations": {},
           "parameters": [
             {
@@ -469,6 +469,38 @@
               "description": "Lock status",
               "required": true,
               "type": "boolean",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            },
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"tld not supported\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/domains/{domain}/protection/lock/",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get lock state.",
+          "notes": "",
+          "type": {"result": "ok", "locked": "true"},
+          "nickname": "getDomainLock",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain",
+              "required": true,
+              "type": "string",
               "paramType": "path"
             }
           ],
