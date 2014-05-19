@@ -54,6 +54,47 @@
       ]
     },
     {
+      "path": "/domains/{domain}/stats/email",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get the specified domain's email filtering statistics.",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "stats": {
+              "clean": 100,
+              "spam": 2,
+              "virus": 1,
+              "whitelisted": 0,
+              "blacklisted": 0
+            }
+          },
+          "nickname": "domainEmailStats",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
       "path": "/domains/{domain}/epp",
       "operations": [
         {
@@ -97,8 +138,8 @@
           "summary": "Get domain's contacts info.",
           "notes": "",
           "type": {
-            "result": "ok", 
-            "contact": 
+            "result": "ok",
+            "contact":
               {
                 "nic": "xxx",
                 "name": "Chuck Norris",
@@ -187,7 +228,7 @@
                 "expires": "YYYY-MM-DD",
                 "status": "Pending"
               }
-            ] 
+            ]
           },
           "nickname": "domainList",
           "consumes": [

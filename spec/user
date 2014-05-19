@@ -39,7 +39,7 @@
           "summary": "Get user's contacts.",
           "notes": "",
           "type": {
-            "result": "ok", 
+            "result": "ok",
             "contacts": [
               {
                 "id": "xxxxx",
@@ -79,7 +79,7 @@
           "summary": "Get user info.",
           "notes": "",
           "type": {
-            "result": "ok", 
+            "result": "ok",
             "data": {
               "firstname": "Chuck",
               "lastname": "Norris",
@@ -142,6 +142,41 @@
           "authorizations": {
           },
           "parameters": [
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/user/balance/:amount",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Generate a addFunds invoice.",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "invoiceid": "1234"
+          },
+          "nickname": "userAddBalance",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "amount",
+              "description": "Amount",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
           ],
           "responseMessages": [
             {
