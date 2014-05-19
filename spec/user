@@ -153,7 +153,7 @@
       ]
     },
     {
-      "path": "/user/balance/:amount",
+      "path": "/user/balance/{amount}",
       "operations": [
         {
           "method": "POST",
