@@ -29,8 +29,18 @@
           },
           "parameters": [
             {
-              "subject": "mail subject",
-              "message": "mail message"
+              "name": "subject",
+              "description": "Ticket subject",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "message",
+              "description": "Ticket message",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
             }
           ],
           "responseMessages": [
