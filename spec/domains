@@ -646,11 +646,13 @@
           "type": {
             "result": "ok",
             "stats": [
-              "clean": "0",
-              "spam": "0",
-              "virus": "0",
-              "whitelisted": "0",
-              "blacklisted": "0"
+              {
+                "clean": "0",
+                "spam": "0",
+                "virus": "0",
+                "whitelisted": "0",
+                "blacklisted": "0"
+              }
             ]
           },
           "nickname": "domainSpamStats",
