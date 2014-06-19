@@ -321,9 +321,9 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "Get server graph from source",
+          "summary": "Get server graph from source (image/png)",
           "notes": "",
-          "type": "image/png",
+          "type": {},
           "nickname": "serverGraph",
           "consumes": [
             "application/json"
