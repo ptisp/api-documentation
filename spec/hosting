@@ -47,6 +47,56 @@
           ]
         }
       ]
+    },
+    {
+      "path": "/hosting/{hostingid}/info",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get hosting info.",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "data": [
+              "identifier": "xxxxxx",
+              "name": "ChuckNoris Linux Pack",
+              "domain": "chucknoris.ptisp.pt",
+              "billingcycle": "Monthly",
+              "nextduedate": "YYYY-MM-DD",
+              "status": "active",
+              "serverhostename": "xxxx.xxxxxx.xx",
+              "ips": "000.000.000.000",
+              "mainip": "127.0.0.1",
+              "amount": "9.99",
+              "extras": [
+                { "option": "Ip address", 
+                  "value": "1"
+                },
+                { "option": "WHMCS", 
+                  "value": "0"
+                },
+                { "option": "Managed Hosting", 
+                  "value": "1"
+                }
+              ]
+            ]
+          },
+          "nickname": "hostingInfo",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
     }
   ],
   "models": {

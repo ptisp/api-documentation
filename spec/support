@@ -1,0 +1,74 @@
+{
+  "apiVersion": "2.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "/",
+  "resourcePath": "/support",
+  "produces": [
+    "application/json"
+  ],
+  "authorizations": {
+
+  },
+  "apis": [
+    {
+      "path": "/support/ticket",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Open new ticket in support.",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "message": "Ticket opened."
+          },
+          "nickname": "supportTicket",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "subject": "mail subject",
+              "message": "mail message"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/support/pin",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Support pin",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "pin": "xxxx"
+          },
+          "nickname": "supportPin",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

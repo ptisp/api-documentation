@@ -115,6 +115,36 @@
           ]
         }
       ]
+    },
+    {
+      "path": "/billing/list",
+      "operations": [
+        {
+          "method": "Get",
+          "summary": "Get user billing list",
+          "notes": "",
+          "type": {
+            "result": "ok", 
+            "data": [
+              "identifier": "xxxx",
+              "types": "AddFunds",
+              "total": "9.99",
+              "date": "YYYY-MM-DD",
+              "status": "Paid"
+            ]
+          },
+          "nickname": "billingList",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          ],
+          "responseMessages": [
+          ]
+        }
+      ]
     }
   ],
   "models": {

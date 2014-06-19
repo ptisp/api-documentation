@@ -120,6 +120,218 @@
           ]
         }
       ]
+    },
+    {
+      "path": "/servers/cloud/{serverid}/info",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Cloud server info",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "data": [
+              "identifier": "xxxx",
+              "name": "ChuckNorris CLoud",
+              "domain": "chucknorris.ptisp.pt",
+              "billingcycle": "Monthly",
+              "nextduedate": "YYYY-MM-DD",
+              "status": "active",
+              "ips": "000.000.000.000",
+              "mainip": "127.0.0.1",
+              "amount": "9.99",
+              "extras": [
+                { "option": "Backups", 
+                  "value": "none"
+                },
+                { "option": "Control Panel", 
+                  "value": "none"
+                },
+                { "option": "OS", 
+                  "value": "CentOS"
+                },
+                { "option": "VMs", 
+                  "value": "0"
+                }
+              ]
+            ]
+          },
+          "nickname": "cloudInfo",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/servers/dedicated/{serverid}/info",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Dedicated server info",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "data": [
+              "identifier": "xxxx",
+              "name": "ChuckNorris Server",
+              "domain": "chucknorris.ptisp.pt",
+              "billingcycle": "Monthly",
+              "nextduedate": "YYYY-MM-DD",
+              "status": "active",
+              "ips": "000.000.000.000",
+              "mainip": "127.0.0.1",
+              "amount": "9.99",
+              "extras": [
+                { "option": "Backups", 
+                  "value": "none"
+                },
+                { "option": "Control Panel", 
+                  "value": "none"
+                },
+                { "option": "OS", 
+                  "value": "CentOS"
+                },
+                { "option": "VMs", 
+                  "value": "0"
+                }
+              ]
+            ]
+          },
+          "nickname": "dedicatedInfo",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/servers/vps/{serverid}/info",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "VPS info",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "data": [
+              "identifier": "xxxx",
+              "name": "ChuckNorris VPS",
+              "domain": "chucknorris.ptisp.pt",
+              "billingcycle": "Monthly",
+              "nextduedate": "YYYY-MM-DD",
+              "status": "active",
+              "ips": "000.000.000.000",
+              "mainip": "127.0.0.1",
+              "amount": "9.99",
+              "extras": [
+                { "option": "Backups", 
+                  "value": "none"
+                },
+                { "option": "Control Panel", 
+                  "value": "none"
+                },
+                { "option": "OS", 
+                  "value": "CentOS"
+                },
+                { "option": "VMs", 
+                  "value": "0"
+                }
+              ]
+            ]
+          },
+          "nickname": "vpsInfo",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/servers/{type}/{serverid}/graphs",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Server graphs info",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "services": [
+              "service": "service_name",
+              "sources": "2"
+            ]
+          },
+          "nickname": "serverGraph",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    }
+    {
+      "path": "/servers/{type}/{serverid}/graphs/{service}/{source}",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get server graph from source",
+          "notes": "",
+          "type": "image/png",
+          "nickname": "serverGraph",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
     }
   ],
   "models": {

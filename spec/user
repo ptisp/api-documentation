@@ -186,6 +186,45 @@
           ]
         }
       ]
+    },
+    {
+      "path": "/user/email",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get emails.",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "emails":[
+              {
+                "id": "xxxxx",
+                "userid": "xxxxxx",
+                "subject": "ChuckNorris moved to PTISP",
+                "message"; "html containing the email message",
+                "date": "YYYY-MM-DD HH:MM:SS",
+                "to": "xxxxx@xxxxx.xx",
+                "cc": "xxxx@xxxxx.xx",
+                "bcc": "xxxx@xxxx.xx"
+              }
+            ]
+          },
+          "nickname": "userEmails",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
     }
   ],
   "models": {

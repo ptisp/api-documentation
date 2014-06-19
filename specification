@@ -29,6 +29,10 @@
     {
       "path": "https://api.ptisp.pt/spec/services",
       "description": "Services controller"
+    },
+    {
+      "path": "https://api.ptisp.pt/spec/support",
+      "description": "Support controller"
     }
   ],
   "authorizations": {

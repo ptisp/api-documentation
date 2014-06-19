@@ -46,6 +46,49 @@
           ]
         }
       ]
+    },
+    {
+      "path": "/services/{serviceid}/info",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get service info",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "products": [
+              "identifier": "xxxx",
+              "name": "ChuckNorris Service",
+              "domain": "chucknorris.ptisp.pt",
+              "billingcycle": "Monthly",
+              "nextduedate": "YYYY-MM-DD",
+              "status": "active",
+              "ips": "000.000.000.000",
+              "mainip": "127.0.0.1",
+              "amount": "9.99",
+              "extras": [
+                { "option": "Control Panel", 
+                  "value": "WHMSONIC"
+                }
+              ]
+            ]
+          },
+          "nickname": "servicesList",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
     }
   ],
   "models": {
