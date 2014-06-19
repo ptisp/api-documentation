@@ -315,7 +315,7 @@
           ]
         }
       ]
-    }
+    },
     {
       "path": "/servers/{type}/{serverid}/graphs/{service}/{source}",
       "operations": [
