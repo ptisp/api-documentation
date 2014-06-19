@@ -667,38 +667,6 @@
           ]
         }
       ]
-    },
-    {
-      "path": "/domains/{domain}/pricing/{type}",
-      "operations": [
-        {
-          "method": "GET",
-          "summary": "Get pricing to renew/register domain",
-          "notes": "",
-          "type": {
-            "result": "ok",
-            "pricing": [
-              {
-                "1": "10",
-                "3": "30",
-                "5": "50"
-              }
-            ],
-            "currency": "€",
-            "type": "renew"
-          },
-          "nickname": "domainPricing",
-          "authorizations": {},
-          "parameters": [
-          ],
-          "responseMessages": [
-            {
-              "code": 400,
-              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
-            }
-          ]
-        }
-      ]
     }
   ],
   "models": {
