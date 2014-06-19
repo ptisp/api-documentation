@@ -293,8 +293,10 @@
           "type": {
             "result":"ok",
             "services": [
-              "service": "service_name",
-              "sources": "2"
+              {
+                "service": "service_name",
+                "sources": "2"
+              }
             ]
           },
           "nickname": "serverGraph",
