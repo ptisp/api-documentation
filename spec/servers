@@ -323,9 +323,7 @@
           "method": "GET",
           "summary": "Get server graph from source",
           "notes": "",
-          "type": [
-            "image/png"
-          ],
+          "type": "image/png",
           "nickname": "serverGraph",
           "consumes": [
             "application/json"
