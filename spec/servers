@@ -131,29 +131,31 @@
           "type": {
             "result":"ok",
             "data": [
-              "identifier": "xxxx",
-              "name": "ChuckNorris CLoud",
-              "domain": "chucknorris.ptisp.pt",
-              "billingcycle": "Monthly",
-              "nextduedate": "YYYY-MM-DD",
-              "status": "active",
-              "ips": "000.000.000.000",
-              "mainip": "127.0.0.1",
-              "amount": "9.99",
-              "extras": [
-                { "option": "Backups", 
-                  "value": "none"
-                },
-                { "option": "Control Panel", 
-                  "value": "none"
-                },
-                { "option": "OS", 
-                  "value": "CentOS"
-                },
-                { "option": "VMs", 
-                  "value": "0"
-                }
-              ]
+              {
+                "identifier": "xxxx",
+                "name": "ChuckNorris CLoud",
+                "domain": "chucknorris.ptisp.pt",
+                "billingcycle": "Monthly",
+                "nextduedate": "YYYY-MM-DD",
+                "status": "active",
+                "ips": "000.000.000.000",
+                "mainip": "127.0.0.1",
+                "amount": "9.99",
+                "extras": [
+                  { "option": "Backups", 
+                    "value": "none"
+                  },
+                  { "option": "Control Panel", 
+                    "value": "none"
+                  },
+                  { "option": "OS", 
+                    "value": "CentOS"
+                  },
+                  { "option": "VMs", 
+                    "value": "0"
+                  }
+                ]
+              }
             ]
           },
           "nickname": "cloudInfo",
@@ -183,29 +185,31 @@
           "type": {
             "result":"ok",
             "data": [
-              "identifier": "xxxx",
-              "name": "ChuckNorris Server",
-              "domain": "chucknorris.ptisp.pt",
-              "billingcycle": "Monthly",
-              "nextduedate": "YYYY-MM-DD",
-              "status": "active",
-              "ips": "000.000.000.000",
-              "mainip": "127.0.0.1",
-              "amount": "9.99",
-              "extras": [
-                { "option": "Backups", 
-                  "value": "none"
-                },
-                { "option": "Control Panel", 
-                  "value": "none"
-                },
-                { "option": "OS", 
-                  "value": "CentOS"
-                },
-                { "option": "VMs", 
-                  "value": "0"
-                }
-              ]
+              {
+                "identifier": "xxxx",
+                "name": "ChuckNorris Server",
+                "domain": "chucknorris.ptisp.pt",
+                "billingcycle": "Monthly",
+                "nextduedate": "YYYY-MM-DD",
+                "status": "active",
+                "ips": "000.000.000.000",
+                "mainip": "127.0.0.1",
+                "amount": "9.99",
+                "extras": [
+                  { "option": "Backups", 
+                    "value": "none"
+                  },
+                  { "option": "Control Panel", 
+                    "value": "none"
+                  },
+                  { "option": "OS", 
+                    "value": "CentOS"
+                  },
+                  { "option": "VMs", 
+                    "value": "0"
+                  }
+                ]
+              }
             ]
           },
           "nickname": "dedicatedInfo",
@@ -235,29 +239,31 @@
           "type": {
             "result":"ok",
             "data": [
-              "identifier": "xxxx",
-              "name": "ChuckNorris VPS",
-              "domain": "chucknorris.ptisp.pt",
-              "billingcycle": "Monthly",
-              "nextduedate": "YYYY-MM-DD",
-              "status": "active",
-              "ips": "000.000.000.000",
-              "mainip": "127.0.0.1",
-              "amount": "9.99",
-              "extras": [
-                { "option": "Backups", 
-                  "value": "none"
-                },
-                { "option": "Control Panel", 
-                  "value": "none"
-                },
-                { "option": "OS", 
-                  "value": "CentOS"
-                },
-                { "option": "VMs", 
-                  "value": "0"
-                }
-              ]
+              {
+                "identifier": "xxxx",
+                "name": "ChuckNorris VPS",
+                "domain": "chucknorris.ptisp.pt",
+                "billingcycle": "Monthly",
+                "nextduedate": "YYYY-MM-DD",
+                "status": "active",
+                "ips": "000.000.000.000",
+                "mainip": "127.0.0.1",
+                "amount": "9.99",
+                "extras": [
+                  { "option": "Backups", 
+                    "value": "none"
+                  },
+                  { "option": "Control Panel", 
+                    "value": "none"
+                  },
+                  { "option": "OS", 
+                    "value": "CentOS"
+                  },
+                  { "option": "VMs", 
+                    "value": "0"
+                  }
+                ]
+              }
             ]
           },
           "nickname": "vpsInfo",
