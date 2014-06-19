@@ -126,11 +126,13 @@
           "type": {
             "result": "ok", 
             "data": [
-              "identifier": "xxxx",
-              "types": "AddFunds",
-              "total": "9.99",
-              "date": "YYYY-MM-DD",
-              "status": "Paid"
+              {
+                "identifier": "xxxx",
+                "types": "AddFunds",
+                "total": "9.99",
+                "date": "YYYY-MM-DD",
+                "status": "Paid"
+              }
             ]
           },
           "nickname": "billingList",
