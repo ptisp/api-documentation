@@ -340,6 +340,312 @@
           ]
         }
       ]
+    },
+    {
+      "path": "/servers/pricing/:id",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get server details in euros",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "pricing":
+            [
+              { 
+                "1": "1.00",
+                "3": "2.00",
+                "6": "3.00",
+                "12": "4.00",
+                "24": "5.00"
+              }
+            ],
+            "currency": "€",
+            "name": "xxxxxx",
+            "description": "xxxx",
+            "extras": [
+              {
+                "id": "xx",
+                "name": "xxxx",
+                "type": "xxxx",
+                "options": [
+                  {
+                    "id": "xx",
+                    "name": "xxxxx",
+                    "recurring": "xxxx",
+                    "pricing": [
+                      {
+                        "1": "1.00",
+                        "3": "2.00",
+                        "6": "3.00",
+                        "12": "4.00",
+                        "24": "5.00"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "nickname": "serversPricing",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          {
+              "name": "id",
+              "description": "Server id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/servers/pricing/:id/:cid",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get server details in specified currency",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "pricing":
+            [
+              { 
+                "1": "1.00",
+                "3": "2.00",
+                "6": "3.00",
+                "12": "4.00",
+                "24": "5.00"
+              }
+            ],
+            "currency": "x",
+            "name": "xxxxxx",
+            "description": "xxxx",
+            "extras": [
+              {
+                "id": "xx",
+                "name": "xxxx",
+                "type": "xxxx",
+                "options": [
+                  {
+                    "id": "xx",
+                    "name": "xxxxx",
+                    "recurring": "xxxx",
+                    "pricing": [
+                      {
+                        "1": "1.00",
+                        "3": "2.00",
+                        "6": "3.00",
+                        "12": "4.00",
+                        "24": "5.00"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "nickname": "serverPricing",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "id",
+              "description": "Server id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "cid",
+              "description": "Server id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/servers/dedicated/{serverid}/power/status",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Server power info",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "status": [
+              {
+                "pdu": "on/off",
+                "ipmi": "Chassis Power is on/off"
+              }
+            ]
+          },
+          "nickname": "serverPower",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "serverid",
+              "description": "Server id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/servers/dedicated/{serverid}/power/ipmi/cycle",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Power Cycle",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "data": "xxxx"
+          },
+          "nickname": "serverIpmiCycle",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "serverid",
+              "description": "Server id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            },
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/servers/dedicated/{serverid}/power/ipmi/{state}",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Set ipmi on/off",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "data": "xxxx"
+          },
+          "nickname": "serverIpmi",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "serverid",
+              "description": "Server id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "state",
+              "description": "Ipmi State",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            },
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/servers/dedicated/{serverid}/power/pdu/{state}",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Set pdu on/off",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "data": "xxxx"
+          },
+          "nickname": "serverPdu",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "serverid",
+              "description": "Server id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "state",
+              "description": "Pdu State",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            },
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
     }
   ],
   "models": {

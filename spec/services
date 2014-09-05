@@ -91,6 +91,153 @@
           ]
         }
       ]
+    },
+    {
+      "path": "/services/pricing/:id",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get services details in euros",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "pricing":
+            [
+              { 
+                "1": "1.00",
+                "3": "2.00",
+                "6": "3.00",
+                "12": "4.00",
+                "24": "5.00"
+              }
+            ],
+            "currency": "€",
+            "name": "xxxxxx",
+            "description": "xxxx",
+            "extras": [
+              {
+                "id": "xx",
+                "name": "xxxx",
+                "type": "xxxx",
+                "options": [
+                  {
+                    "id": "xx",
+                    "name": "xxxxx",
+                    "recurring": "xxxx",
+                    "pricing": [
+                      {
+                        "1": "1.00",
+                        "3": "2.00",
+                        "6": "3.00",
+                        "12": "4.00",
+                        "24": "5.00"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "nickname": "servicesPricing",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+          {
+              "name": "id",
+              "description": "Service id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/services/pricing/:id/:cid",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get services details in specified currency",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "pricing":
+            [
+              { 
+                "1": "1.00",
+                "3": "2.00",
+                "6": "3.00",
+                "12": "4.00",
+                "24": "5.00"
+              }
+            ],
+            "currency": "x",
+            "name": "xxxxxx",
+            "description": "xxxx",
+            "extras": [
+              {
+                "id": "xx",
+                "name": "xxxx",
+                "type": "xxxx",
+                "options": [
+                  {
+                    "id": "xx",
+                    "name": "xxxxx",
+                    "recurring": "xxxx",
+                    "pricing": [
+                      {
+                        "1": "1.00",
+                        "3": "2.00",
+                        "6": "3.00",
+                        "12": "4.00",
+                        "24": "5.00"
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          },
+          "nickname": "servicesPricing",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "id",
+              "description": "Service id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "cid",
+              "description": "Server id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
     }
   ],
   "models": {

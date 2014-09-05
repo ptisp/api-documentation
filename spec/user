@@ -225,6 +225,281 @@
           ]
         }
       ]
+    },
+    {
+      "path": "/user/email/{start}/{count}",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get especific number of emails.",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "emails":[
+              {
+                "id": "xxxxx",
+                "userid": "xxxxxx",
+                "subject": "ChuckNorris moved to PTISP",
+                "message": "html containing the email message",
+                "date": "YYYY-MM-DD HH:MM:SS",
+                "to": "xxxxx@xxxxx.xx",
+                "cc": "xxxx@xxxxx.xx",
+                "bcc": "xxxx@xxxx.xx"
+              }
+            ]
+          },
+          "nickname": "userEmails",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "start",
+              "description": "Start from",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "count",
+              "description": "Number of emails",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/user/update",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Update User Information",
+          "notes": "",
+          "type": {"result": "ok", "userid": "xxxxxx"},
+          "nickname": "updateUser",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "name",
+              "description": "User Name",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "mail",
+              "description": "User Email",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "currency",
+              "description": "Currency Used",
+              "required": false,
+              "type": "integer",
+              "paramType": "body"
+            },
+            {
+              "name": "address",
+              "description": "User Address",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "city",
+              "description": "City Name",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "country",
+              "description": "User Country",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "postalcode",
+              "description": "User Postal Code",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "phone",
+              "description": "User Phone Number",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "password",
+              "description": "User Password",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "threshold",
+              "description": "User Threshold information",
+              "required": false,
+              "type": "customfields",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/user/contacts/create",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Create New Account Contact",
+          "notes": "",
+          "type": {"result": "ok", "contactid": "xxxxxx"},
+          "nickname": "updateUser",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "contactid",
+              "description": "Contact ID",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "name",
+              "description": "Contact Name",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "mail",
+              "description": "Contact Email",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "password",
+              "description": "Contact Password",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "permissions",
+              "description": "Contact Permissions",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "generalemails",
+              "description": "Receive general email notifications",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "productemails",
+              "description": "Receive products email notifications",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "domainemails",
+              "description": "Receive domains email notifications",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "invoiceemails",
+              "description": "Receive invoices email notifications",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "supportemails",
+              "description": "Receive support email notifications",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            }  
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/user/contacts/create",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Create New Account Contact",
+          "notes": "",
+          "type": {"result": "ok", "contactid": "xxxxxx"},
+          "nickname": "updateUser",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "contactid",
+              "description": "Contact ID",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            } 
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
     }
   ],
   "models": {

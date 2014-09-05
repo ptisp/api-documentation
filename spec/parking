@@ -1,0 +1,551 @@
+{
+  "apiVersion": "2.0.0",
+  "swaggerVersion": "1.2",
+  "basePath": "/",
+  "resourcePath": "/parking",
+  "produces": [
+    "application/json"
+  ],
+  "authorizations": {
+
+  },
+  "apis": [
+  	{
+      "path": "/parking/{domain}/park",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Park domain",
+          "notes": "",
+          "type": {
+          	"result":"ok",
+            "domain": "as24768.net"
+          },
+          "nickname": "parkingPark",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain name",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/parking/{domain}/unpark",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Unpark domain",
+          "notes": "",
+          "type": {
+          	"result":"ok",
+            "domain": "as24768.net"
+          },
+          "nickname": "parkingUnpark",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain name",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/parking/{domain}/dns/list",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get domain parking zones",
+          "notes": "",
+          "type": {
+          	"result":"ok",
+          	"records":[
+          		{
+          			"nsdname": "ns2.mydnspt.net",
+          			"ttl": "86400",
+          			"type": "NS",
+          			"name": "as24768.net",
+          			"class": "IN",
+          			"line": "xx"
+          		},
+          		{
+          			"address": "127.0.0.1",
+          			"ttl": "14400",
+          			"type": "A",
+          			"name": "as24768.net",
+          			"class": "IN",
+          			"line": "xx"
+          		},
+          		{
+          			"exchange": "as24768.net",
+          			"ttl": "14400",
+          			"type": "MX",
+          			"preference": "x",
+          			"name": "as24768.net",
+          			"class": "IN",
+          			"line": "xx"
+          		},
+          		{
+          			"cname": "as24768.net",
+          			"ttl": "14400",
+          			"type": "CNAME",
+          			"name": "mail.as24768.net",
+          			"class": "IN",
+          			"line": "xx"
+          		}
+          	],
+            "domain": "as24768.net"
+          },
+          "nickname": "parkingDnsZones",
+          "authorizations": {},
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain name",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/parking/{domain}/dns/add",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Add dns record to parked domain",
+          "notes": "",
+          "type": {
+          	"result":"ok",
+            "message": "dns record added"
+          },
+          "nickname": "parkingAddZone",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain name",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/parking/{domain}/dns/{line}/delete",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Delete dns record from parked domain",
+          "notes": "",
+          "type": {
+          	"result":"ok",
+            "message": "dns record removed"
+          },
+          "nickname": "parkingRemoveZone",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain name",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "line",
+              "description": "Line number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/parking/{domain}/dns/{line}/edit",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Edits dns record from parked domain",
+          "notes": "",
+          "type": {
+          	"result":"ok",
+            "message": "dns record updated"
+          },
+          "nickname": "parkingEditZone",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain name",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "line",
+              "description": "Line number",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/parking/{domain}/redirect",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get parked domain redirects",
+          "notes": "",
+          "type": {
+          	"result":"ok",
+          	"records":[
+          		{
+          			"_id": "xxxxx",
+          			"domain": "as24768.net",
+          			"destination": "127.0.0.1",
+          			"title": "xxxxx"
+          		}
+          	],
+            "domain": "as24768.net"
+          },
+          "nickname": "parkingRedirect",
+          "authorizations": {},
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain name",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/parking/{domain}/redirect",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Adds redirect to parked domain",
+          "notes": "",
+          "type": {
+          	"result":"ok",
+            "message": "redirect added"
+          },
+          "nickname": "parkingRedirectAdd",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain name",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "destination",
+              "description": "Redirect destination",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "title",
+              "description": "Redirect title",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/parking/{domain}/redirect/delete",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Remove redirect from parked domain",
+          "notes": "",
+          "type": {
+          	"result":"ok",
+            "message": "redirect removed"
+          },
+          "nickname": "parkingRedirectRemove",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain name",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/parking/{domain}/emails/add",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Add email account",
+          "notes": "",
+          "type": {
+          	"result":"ok",
+            "message": "email account added"
+          },
+          "nickname": "parkingAddMail",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain name",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "email",
+              "description": "Email",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "password",
+              "description": "Email password",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/parking/{domain}/emails/edit",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Edit email account",
+          "notes": "",
+          "type": {
+          	"result":"ok",
+            "message": "password changed"
+          },
+          "nickname": "parkingEditMail",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain name",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "email",
+              "description": "Email",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "password",
+              "description": "Email password",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/parking/{domain}/emails/list",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "List parked domain Emails",
+          "notes": "",
+          "type": {
+          	"result":"ok",
+          	"records":[
+          		{
+          			"domain": "as24768.net",
+								"txtdiskquota": "1024",
+								"diskquota": "1024",
+								"user": "test",
+								"diskused": "0",
+								"_diskquota": "1073741824",
+								"diskusedpercent": "0",
+								"login": "test@as24768.net",
+								"humandiskquota": "1 GB",
+								"_diskused": "0",
+								"email": "test@as24768.net",
+								"diskusedpercent20": "0",
+								"humandiskused": "None",
+								"mtime": "1409916949"
+          		}
+          	]
+          },
+          "nickname": "parkingMailList",
+          "authorizations": {},
+          "consumes": [
+            "application/json"
+          ],
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain name",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/parking/{domain}/emails/edit",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Remove email account",
+          "notes": "",
+          "type": {
+          	"result":"ok",
+            "message": "email account removed"
+          },
+          "nickname": "parkingEditMail",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "domain",
+              "description": "Domain name",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "email",
+              "description": "Email",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "models": {
+  }
+}

@@ -147,6 +147,80 @@
           ]
         }
       ]
+    },
+    {
+      "path": "/billing/list/{start}/{count}",
+      "operations": [
+        {
+          "method": "Get",
+          "summary": "Get user billing list",
+          "notes": "",
+          "type": {
+            "result": "ok", 
+            "data": [
+              {
+                "identifier": "xxxx",
+                "types": "AddFunds",
+                "total": "9.99",
+                "date": "YYYY-MM-DD",
+                "status": "Paid"
+              }
+            ]
+          },
+          "nickname": "billingList",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "start",
+              "description": "Start from",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "count",
+              "description": "Number of emails",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/billing/invoice/{invoice}/download",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get invoice PDF file (.pdf).",
+          "notes": "",
+          "type": {},
+          "nickname": "billingInvoice",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "invoice",
+              "description": "Invoiceid",
+              "required": true,
+              "type": "integer",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+          ]
+        }
+      ]
     }
   ],
   "models": {
