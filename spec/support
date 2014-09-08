@@ -79,6 +79,176 @@
           ]
         }
       ]
+    },
+    {
+      "path": "/support/tickets/open",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Open new ticket in support.",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "message": "Ticket opened."
+          },
+          "nickname": "supportTicket",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "subject",
+              "description": "Ticket subject",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "message",
+              "description": "Ticket message",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/support/tickets/open",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Open new ticket in support.",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "message": "Ticket opened."
+          },
+          "nickname": "supportTicket",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "id",
+              "description": "Ticket id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "message",
+              "description": "Ticket message",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/support/tickets/:id",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get ticket",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "ticket": [
+              {
+                "email": "xxxxx@xxxx.xx",
+                "lastactivity": "00000000000",
+                "created": "000000000000",
+                "name": "yyyy@yyyy.yy",
+                "subject": "xxxxx",
+                "id": "xxxx-00000",
+                "status": "0",
+                "posts":[
+                  {
+                    "content": "xxxx",
+                    "name": "xxxxxx",
+                    "email": "xxxx@xxxxx.xx",
+                    "created": "0000000"
+                  }
+                ]
+              }
+            ]},
+          "nickname": "getTickets",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "id",
+              "description": "Ticket id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/support/tickets/list/:status",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get all tickets with status",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "tickets": [
+              {
+                "id": "xxxx-0000",
+                "status": "0",
+                "created": "000000",
+                "lastactivity": "0000000000",
+                "subject": "xxxxxxxxx"
+              }
+            ]},
+          "nickname": "getTickets",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "status",
+              "description": "Ticket status",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+          ]
+        }
+      ]
     }
   ]
 }
