@@ -342,7 +342,7 @@
       ]
     },
     {
-      "path": "/servers/pricing/:id",
+      "path": "/servers/pricing/{id}",
       "operations": [
         {
           "method": "GET",
@@ -412,7 +412,7 @@
       ]
     },
     {
-      "path": "/servers/pricing/:id/:cid",
+      "path": "/servers/pricing/{id}/{cid}",
       "operations": [
         {
           "method": "GET",

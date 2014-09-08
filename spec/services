@@ -93,7 +93,7 @@
       ]
     },
     {
-      "path": "/services/pricing/:id",
+      "path": "/services/pricing/{id}",
       "operations": [
         {
           "method": "GET",
@@ -163,7 +163,7 @@
       ]
     },
     {
-      "path": "/services/pricing/:id/:cid",
+      "path": "/services/pricing/{id}/{cid}",
       "operations": [
         {
           "method": "GET",

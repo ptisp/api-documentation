@@ -101,7 +101,7 @@
       ]
     },
     {
-      "path": "/hosting/pricing/:id",
+      "path": "/hosting/pricing/{id}",
       "operations": [
         {
           "method": "GET",
@@ -171,7 +171,7 @@
       ]
     },
     {
-      "path": "/hosting/pricing/:id/:cid",
+      "path": "/hosting/pricing/{id}/{cid}",
       "operations": [
         {
           "method": "GET",
