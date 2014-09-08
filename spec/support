@@ -11,76 +11,6 @@
   },
   "apis": [
     {
-      "path": "/support/ticket",
-      "operations": [
-        {
-          "method": "POST",
-          "summary": "Open new ticket in support.",
-          "notes": "",
-          "type": {
-            "result":"ok",
-            "message": "Ticket opened."
-          },
-          "nickname": "supportTicket",
-          "consumes": [
-            "application/json"
-          ],
-          "authorizations": {
-          },
-          "parameters": [
-            {
-              "name": "subject",
-              "description": "Ticket subject",
-              "required": true,
-              "type": "string",
-              "paramType": "body"
-            },
-            {
-              "name": "message",
-              "description": "Ticket message",
-              "required": true,
-              "type": "string",
-              "paramType": "body"
-            }
-          ],
-          "responseMessages": [
-            {
-              "code": 500,
-              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "path": "/support/pin",
-      "operations": [
-        {
-          "method": "POST",
-          "summary": "Support pin",
-          "notes": "",
-          "type": {
-            "result":"ok",
-            "pin": "xxxx"
-          },
-          "nickname": "supportPin",
-          "consumes": [
-            "application/json"
-          ],
-          "authorizations": {
-          },
-          "parameters": [
-          ],
-          "responseMessages": [
-            {
-              "code": 500,
-              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "path": "/support/tickets/open",
       "operations": [
         {
@@ -123,15 +53,15 @@
       ]
     },
     {
-      "path": "/support/tickets/open",
+      "path": "/support/tickets/{id}/reply",
       "operations": [
         {
           "method": "POST",
-          "summary": "Open new ticket in support.",
+          "summary": "Send ticket reply",
           "notes": "",
           "type": {
             "result":"ok",
-            "message": "Ticket opened."
+            "message": "reply posted successfully."
           },
           "nickname": "supportTicket",
           "consumes": [
