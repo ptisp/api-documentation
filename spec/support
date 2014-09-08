@@ -165,7 +165,7 @@
       ]
     },
     {
-      "path": "/support/tickets/:id",
+      "path": "/support/tickets/{id}",
       "operations": [
         {
           "method": "GET",
@@ -213,7 +213,7 @@
       ]
     },
     {
-      "path": "/support/tickets/list/:status",
+      "path": "/support/tickets/list/{status}",
       "operations": [
         {
           "method": "GET",
