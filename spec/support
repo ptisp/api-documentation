@@ -179,6 +179,41 @@
           ]
         }
       ]
+    },
+    {
+      "path": "/support/tickets/{id}/close",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Close ticket",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "message": "ticket closed successfully."
+          },
+          "nickname": "supportTicket",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "id",
+              "description": "Ticket id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
     }
   ]
 }
