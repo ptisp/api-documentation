@@ -28,7 +28,7 @@
                 "nextduedate": "YYYY-MM-DD",
                 "status": "Pending"
               }
-            ] 
+            ]
           },
           "nickname": "dedicatedserversList",
           "consumes": [
@@ -142,16 +142,16 @@
                 "mainip": "127.0.0.1",
                 "amount": "9.99",
                 "extras": [
-                  { "option": "Backups", 
+                  { "option": "Backups",
                     "value": "none"
                   },
-                  { "option": "Control Panel", 
+                  { "option": "Control Panel",
                     "value": "none"
                   },
-                  { "option": "OS", 
+                  { "option": "OS",
                     "value": "CentOS"
                   },
-                  { "option": "VMs", 
+                  { "option": "VMs",
                     "value": "0"
                   }
                 ]
@@ -196,16 +196,16 @@
                 "mainip": "127.0.0.1",
                 "amount": "9.99",
                 "extras": [
-                  { "option": "Backups", 
+                  { "option": "Backups",
                     "value": "none"
                   },
-                  { "option": "Control Panel", 
+                  { "option": "Control Panel",
                     "value": "none"
                   },
-                  { "option": "OS", 
+                  { "option": "OS",
                     "value": "CentOS"
                   },
-                  { "option": "VMs", 
+                  { "option": "VMs",
                     "value": "0"
                   }
                 ]
@@ -250,16 +250,16 @@
                 "mainip": "127.0.0.1",
                 "amount": "9.99",
                 "extras": [
-                  { "option": "Backups", 
+                  { "option": "Backups",
                     "value": "none"
                   },
-                  { "option": "Control Panel", 
+                  { "option": "Control Panel",
                     "value": "none"
                   },
-                  { "option": "OS", 
+                  { "option": "OS",
                     "value": "CentOS"
                   },
-                  { "option": "VMs", 
+                  { "option": "VMs",
                     "value": "0"
                   }
                 ]
@@ -352,7 +352,7 @@
             "result":"ok",
             "pricing":
             [
-              { 
+              {
                 "1": "1.00",
                 "3": "2.00",
                 "6": "3.00",
@@ -422,7 +422,7 @@
             "result":"ok",
             "pricing":
             [
-              { 
+              {
                 "1": "1.00",
                 "3": "2.00",
                 "6": "3.00",
@@ -629,6 +629,251 @@
             {
               "name": "state",
               "description": "Pdu State",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            },
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/servers/dedicated/{serverid}/sensors",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get sensors information",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "data": "xxxx"
+          },
+          "nickname": "serverSensors",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "serverid",
+              "description": "Server id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            },
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/servers/dedicated/{serverid}/provision/images/{imageid}",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get Image",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "data": "xxxx"
+          },
+          "nickname": "serverImage",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "serverid",
+              "description": "Server id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "imageid",
+              "description": "Image Id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            },
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/servers/dedicated/{serverid}/provision/images",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get available Images",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "data": "xxxx"
+          },
+          "nickname": "serverImages",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "serverid",
+              "description": "Server id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            },
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/servers/dedicated/{serverid}/provision",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Start new server provision",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "data": "xxxx"
+          },
+          "nickname": "serverProvision",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "serverid",
+              "description": "Server id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "hostname",
+              "description": "Hostname",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "password",
+              "description": "New root Password",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "disklayout",
+              "description": "New disklayout",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "profile",
+              "description": "New OS",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            },
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/servers/dedicated/{serverid}/provision/status",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get provision status",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "data": "xxxx"
+          },
+          "nickname": "serverProvisionStatus",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "serverid",
+              "description": "Server id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            },
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/servers/dedicated/{serverid}/provision/cancel",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Cancel existing provision order",
+          "notes": "",
+          "type": {
+            "result":"ok",
+            "data": "xxxx"
+          },
+          "nickname": "serverProvisionCancel",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "serverid",
+              "description": "Server id",
               "required": true,
               "type": "string",
               "paramType": "path"
