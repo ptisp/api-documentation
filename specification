@@ -23,6 +23,10 @@
       "description": "Hosting controller"
     },
     {
+      "path": "https://api.ptisp.pt/spec/parking",
+      "description": "Parking controller"
+    },
+    {
       "path": "https://api.ptisp.pt/spec/servers",
       "description": "Servers controller"
     },
