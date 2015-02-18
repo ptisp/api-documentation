@@ -508,7 +508,7 @@
       ]
     },
     {
-      "path": "/parking/{domain}/emails/edit",
+      "path": "/parking/{domain}/emails/delete",
       "operations": [
         {
           "method": "POST",
