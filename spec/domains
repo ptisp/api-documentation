@@ -642,6 +642,38 @@
           ]
         }
       ]
+    },
+    {
+      "path": "/domains/pricing",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Available TLD's and prices",
+          "notes": "",
+          "type": {"result": "ok", "tlds": [
+            {"tld": ".pt", "prices": {
+              "1": "xxx",
+              "2": "xxx",
+              "3": "xxx"
+              }
+            },
+            {"tld": ".com", "prices": {
+              "1": "xxx",
+              "2": "xxx",
+              "3": "xxx"
+              }
+            }
+          ]},
+          "nickname": "domainPricing",
+          "authorizations": {},
+          "responseMessages": [
+            {
+              "code": 400,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
     }
   ],
   "models": {
