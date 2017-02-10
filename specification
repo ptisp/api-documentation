@@ -37,6 +37,10 @@
     {
       "path": "https://api.ptisp.pt/spec/support",
       "description": "Support controller"
+    },
+    {
+      "path": "https://api.ptisp.pt/spec/premiummail",
+      "description": "Premium mail controller"
     }
   ],
   "authorizations": {
