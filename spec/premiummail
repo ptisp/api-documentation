@@ -688,7 +688,7 @@
       "path": "/premiummail/{serviceid}/domain/{domain}",
       "operations": [
         {
-          "method": "DEL",
+          "method": "DELETE",
           "summary": "Delete domain",
           "notes": "",
           "type": {
@@ -815,7 +815,7 @@
       "path": "/premiummail/{serviceid}/mailbox/{email}",
       "operations": [
         {
-          "method": "DEL",
+          "method": "DELETE",
           "summary": "Delete mailbox",
           "notes": "",
           "type": {
@@ -1248,7 +1248,7 @@
       "path": "/premiummail/{serviceid}/forwarding/{email}",
       "operations": [
         {
-          "method": "DEL",
+          "method": "DELETE",
           "summary": "Disable email forwarding",
           "notes": "",
           "type": {
@@ -1421,7 +1421,7 @@
       "path": "/premiummail/{serviceid}/autoreply/{email}",
       "operations": [
         {
-          "method": "DEL",
+          "method": "DELETE",
           "summary": "Disable auto-responder",
           "notes": "",
           "type": {
