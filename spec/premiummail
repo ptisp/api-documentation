@@ -1,5 +1,5 @@
 {
-  "apiVersion": "2.0.1",
+  "apiVersion": "2.0.0",
   "swaggerVersion": "1.2",
   "basePath": "/",
   "resourcePath": "/premiummail",
@@ -51,7 +51,1414 @@
             {
               "code": 500,
               "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/premiummail/{serviceid}/domains",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get service's domains.",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "data": [
+              {
+                "name": "aaa.pt",
+                "isenabled": true,
+                "usercount": 5,
+                "aliascount": 0,
+                "domainaliascount": 0,
+                "listcount": 0,
+                "lastchanged": "0001-01-01T00:00:00.000Z",
+                "sizemb": "0",
+                "filestoragesizemb": "0",
+                "status": "Enabled"
+              },
+              {
+                "name": "bbb.pt",
+                "isenabled": true,
+                "usercount": 5,
+                "aliascount": 0,
+                "domainaliascount": 0,
+                "listcount": 0,
+                "lastchanged": "0001-01-01T00:00:00.000Z",
+                "sizemb": "0",
+                "filestoragesizemb": "0",
+                "status": "Enabled"
+              }
+            ]
+          },
+          "nickname": "getDomainsByService",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "serviceid",
+              "description": "Service's unique identifier",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"access denied\"}"
             },
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "premiummail/{serviceid}/domain/{domain}/mailboxes",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get domain's mailboxes.",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "data": [
+              {
+                "username": "admin@aaa.pt",
+                "firstname": "admin",
+                "lastname": "",
+                "issystemadmin": false,
+                "isdomainadmin": true
+              },
+              {
+                "username": "user0001@aaa.pt",
+                "firstname": "John",
+                "lastname": "Doe",
+                "issystemadmin": false,
+                "isdomainadmin": false
+              }
+            ]
+          },
+          "nickname": "getMailboxesByDomain",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "serviceid",
+              "description": "Service's unique identifier",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "domain",
+              "description": "Domain name",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"access denied\"}"
+            },
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/premiummail/{serviceid}/domain/{domain}/stats",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Get domain domains",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "data": {
+              "messagesreceived": "0",
+              "messagessent": "0",
+              "bytesreceived": "0",
+              "bytessent": "0",
+              "bytessize": "0"
+            }
+          },
+          "nickname": "getDomainStats",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "serviceid",
+              "description": "Service's unique identifier",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "domain",
+              "description": "Domain name",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "startdate",
+              "description": "Search period start, in Datetime format",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "enddate",
+              "description": "Search period end, in Datetime format",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"access denied\"}"
+            },
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/premiummail/{serviceid}/domain/{domain}/quotas",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get domain's mailbox quotas",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "data": [
+              {
+                "username": "admin",
+                "maxspace": 100,
+                "currentspace": "0"
+              },
+              {
+                "username": "user0002",
+                "maxspace": 2048,
+                "currentspace": "0"
+              }
+            ]
+          },
+          "nickname": "getUserQuotasByDomain",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "serviceid",
+              "description": "Service's unique identifier",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "domain",
+              "description": "Domain name",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"access denied\"}"
+            },
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/premiummail/{serviceid}/domain/{domain}",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get domain info",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "data": {
+              "name": "aaa.pt",
+              "isenabled": true,
+              "usercount": 5,
+              "aliascount": 0,
+              "domainaliascount": 0,
+              "listcount": 0,
+              "lastchanged": "0001-01-01T00:00:00.000Z",
+              "sizemb": "0",
+              "filestoragesizemb": "0",
+              "status": "Enabled"
+            }
+          },
+          "nickname": "getDomain",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "serviceid",
+              "description": "Service's unique identifier",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "domain",
+              "description": "Domain name",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"access denied\"}"
+            },
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/premiummail/{serviceid}/domain/{domain}",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Add domain",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "message": "domain added"
+          },
+          "nickname": "addDomain",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "serviceid",
+              "description": "Service's unique identifier",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "domain",
+              "description": "Domain name",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "password",
+              "description": "The password for the primary domain administrator.",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "maxdomainusers",
+              "description": "The maximum number of users the domain is allowed to have.",
+              "required": true,
+              "type": "integer",
+              "paramType": "body"
+            },
+            {
+              "name": "maxdomainsize",
+              "description": "The maximum disk space (in MegaByte) the domain is allowed to occupy.",
+              "required": true,
+              "type": "integer",
+              "paramType": "body"
+            },
+            {
+              "name": "ip",
+              "description": "The IP Address on which the domain should listen.",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "imapport",
+              "description": "The port number on which the domain should accept IMAP connections.",
+              "required": false,
+              "type": "integer",
+              "paramType": "body"
+            },
+            {
+              "name": "popport",
+              "description": "The port number on which the domain should accept POP connections.",
+              "required": false,
+              "type": "integer",
+              "paramType": "body"
+            },
+            {
+              "name": "smtpport",
+              "description": "The port number on which the domain should accept SMTP connections.",
+              "required": false,
+              "type": "integer",
+              "paramType": "body"
+            },
+            {
+              "name": "maxaliases",
+              "description": "The maximum number of user aliases the domain is allowed to have. Pass 0 for unlimited.",
+              "required": false,
+              "type": "integer",
+              "paramType": "body"
+            },
+            {
+              "name": "maxmessagesize",
+              "description": "The maximum size a message can be on the domain. Pass 0 for unlimited.",
+              "required": false,
+              "type": "integer",
+              "paramType": "body"
+            },
+            {
+              "name": "maxrecipients",
+              "description": "The maximum number of recipients a message can contain on the domain. Pass 0 for unlimited.",
+              "required": false,
+              "type": "integer",
+              "paramType": "body"
+            },
+            {
+              "name": "maxdomainaliases",
+              "description": "The maximum number of domain aliases that can be assigned to the domain. Pass 0 for unlimited",
+              "required": false,
+              "type": "integer",
+              "paramType": "body"
+            },
+            {
+              "name": "maxlists",
+              "description": "The maximum number of mailing lists the domain is allowed to have. Pass 0 for unlimited.",
+              "required": false,
+              "type": "integer",
+              "paramType": "body"
+            },
+            {
+              "name": "showdomainaliasmenu",
+              "description": "True to allow domain administrators to modify domain aliases.",
+              "required": false,
+              "type": "boolean",
+              "paramType": "body"
+            },
+            {
+              "name": "showcontentfilteringmenu",
+              "description": "True to allow users to manage content filtering settings.",
+              "required": false,
+              "type": "boolean",
+              "paramType": "body"
+            },
+            {
+              "name": "showspammenu",
+              "description": "True to allow users to manage their own spam settings.",
+              "required": false,
+              "type": "boolean",
+              "paramType": "body"
+            },
+            {
+              "name": "requiresmtp",
+              "description": "True to require SMTP Authentication when relaying email.",
+              "required": false,
+              "type": "boolean",
+              "paramType": "body"
+            },
+            {
+              "name": "showlistmenu",
+              "description": "True to allow domain administrators to manage mailing lists.",
+              "required": false,
+              "type": "boolean",
+              "paramType": "body"
+            },
+            {
+              "name": "listcommandaddress",
+              "description": "The username of the 'list command address.' This is usually a value such as stserv or listserv.",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"access denied\"}"
+            },
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/premiummail/{serviceid}/domain/{domain}/update",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Update domain",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "message": "domain updated"
+          },
+          "nickname": "updateDomain",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "maxdomainusers",
+              "description": "The maximum number of users the domain is allowed to have. Upgradable only.",
+              "required": false,
+              "type": "integer",
+              "paramType": "body"
+              },
+              {
+              "name": "maxdomainsize",
+              "description": "The maximum disk space (in MegaByte) the domain is allowed to occupy. Upgradable only.",
+              "required": false,
+              "type": "integer",
+              "paramType": "body"
+              },
+              {
+              "name": "ip",
+              "description": "The IP Address on which the domain should listen.",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+              },
+              {
+              "name": "imapport",
+              "description": "The port number on which the domain should accept IMAP connections.",
+              "required": false,
+              "type": "integer",
+              "paramType": "body"
+              },
+              {
+              "name": "popport",
+              "description": "The port number on which the domain should accept POP connections.",
+              "required": false,
+              "type": "integer",
+              "paramType": "body"
+              },
+              {
+              "name": "smtpport",
+              "description": "The port number on which the domain should accept SMTP connections.",
+              "required": false,
+              "type": "integer",
+              "paramType": "body"
+              },
+              {
+              "name": "maxaliases",
+              "description": "The maximum number of user aliases the domain is allowed to have. Pass 0 for unlimited.",
+              "required": false,
+              "type": "integer",
+              "paramType": "body"
+              },
+              {
+              "name": "maxmessagesize",
+              "description": "The maximum size a message can be on the domain. Pass 0 for unlimited.",
+              "required": false,
+              "type": "integer",
+              "paramType": "body"
+              },
+              {
+              "name": "maxrecipients",
+              "description": "The maximum number of recipients a message can contain on the domain. Pass 0 for unlimited.",
+              "required": false,
+              "type": "integer",
+              "paramType": "body"
+              },
+              {
+              "name": "maxdomainaliases",
+              "description": "The maximum number of domain aliases that can be assigned to the domain. Pass 0 for unlimited",
+              "required": false,
+              "type": "integer",
+              "paramType": "body"
+              },
+              {
+              "name": "maxlists",
+              "description": "The maximum number of mailing lists the domain is allowed to have. Pass 0 for unlimited.",
+              "required": false,
+              "type": "integer",
+              "paramType": "body"
+              },
+              {
+              "name": "showdomainaliasmenu",
+              "description": "True to allow domain administrators to modify domain aliases.",
+              "required": false,
+              "type": "boolean",
+              "paramType": "body"
+              },
+              {
+              "name": "showcontentfilteringmenu",
+              "description": "True to allow users to manage content filtering settings.",
+              "required": false,
+              "type": "boolean",
+              "paramType": "body"
+              },
+              {
+              "name": "showspammenu",
+              "description": "True to allow users to manage their own spam settings.",
+              "required": false,
+              "type": "boolean",
+              "paramType": "body"
+              },
+              {
+              "name": "requiresmtp",
+              "description": "True to require SMTP Authentication when relaying email.",
+              "required": false,
+              "type": "boolean",
+              "paramType": "body"
+              },
+              {
+              "name": "showlistmenu",
+              "description": "True to allow domain administrators to manage mailing lists.",
+              "required": false,
+              "type": "boolean",
+              "paramType": "body"
+              },
+              {
+              "name": "listcommandaddress",
+              "description": "The username of the 'list command address.' This is usually a value such as stserv or listserv.",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"access denied\"}"
+            },
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/premiummail/{serviceid}/domain/{domain}",
+      "operations": [
+        {
+          "method": "DEL",
+          "summary": "Delete domain",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "data": "domain deleted"
+          },
+          "nickname": "deleteDomain",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "serviceid",
+              "description": "Service's unique identifier",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "domain",
+              "description": "Domain name",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"access denied\"}"
+            },
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/premiummail/{serviceid}/mailbox/{email}",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Add mailbox",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "message": "mailbox created"
+          },
+          "nickname": "addMailbox",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "serviceid",
+              "description": "Service's unique identifier",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "email",
+              "description": "Email address",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "firstname",
+              "description": "First name of the user.",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "lastname",
+              "description": "Last name of the user.",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "password",
+              "description": "Password for the user.",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "maxmailboxsize",
+              "description": "Maximum size for the user mailbox, in MegaByte.",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "isdomainadmin",
+              "description": "True to make the user an administrator over the domain.",
+              "required": false,
+              "type": "boolean",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"access denied\"}"
+            },
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/premiummail/{serviceid}/mailbox/{email}",
+      "operations": [
+        {
+          "method": "DEL",
+          "summary": "Delete mailbox",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "message": "mailbox deleted"
+          },
+          "nickname": "removeMailbox",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "serviceid",
+              "description": "Service's unique identifier",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "email",
+              "description": "Email address",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"access denied\"}"
+            },
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/premiummail/{serviceid}/mailbox/{email}/changename",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Change user's display name",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "message": "display name changed"
+          },
+          "nickname": "modifyUserDisplayName",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "serviceid",
+              "description": "Service's unique identifier",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "email",
+              "description": "Email address",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "firstname",
+              "description": "User's new first name",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "lastname",
+              "description": "User's new last name",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"access denied\"}"
+            },
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/premiummail/{serviceid}/mailbox/{email}/grantadmin",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Grant/Revoke domain admin privilege",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "message": "administrator privilege enabled/disabled"
+          },
+          "nickname": "grantAdmin",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "serviceid",
+              "description": "Service's unique identifier",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "email",
+              "description": "Email address",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "enable",
+              "description": "Pass true for grant or false to revoke",
+              "required": true,
+              "type": "boolean",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"access denied\"}"
+            },
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/premiummail/{serviceid}/mailbox/{email}/setboxsize",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Change mailbox maximum allowed size",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "message": "maximum mailbox size changed"
+          },
+          "nickname": "modifyMailboxSize",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "serviceid",
+              "description": "Service's unique identifier",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "email",
+              "description": "Email address",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "maxsize",
+              "description": "Maximum box size, in Megabyte",
+              "required": true,
+              "type": "integer",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"access denied\"}"
+            },
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/premiummail/{serviceid}/mailbox/{email}/changepassword",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Change mailbox password",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "data": "password changed"
+          },
+          "nickname": "modifyPassword",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "serviceid",
+              "description": "Service's unique identifier",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "email",
+              "description": "Email address",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "newpassword",
+              "description": "New password",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"access denied\"}"
+            },
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/premiummail/{serviceid}/mailbox/{email}/stats",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Get mailbox stats",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "data": {
+              "messagesreceived": "0",
+              "messagessent": "0",
+              "bytesreceived": "0",
+              "bytessent": "0",
+              "bytessize": "0"
+            }
+          },
+          "nickname": "getUserStats",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "serviceid",
+              "description": "Service's unique identifier",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "email",
+              "description": "Email address",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "startdate",
+              "description": "Search period start, in Datetime format",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "enddate",
+              "description": "Search period end, in Datetime format",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"access denied\"}"
+            },
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/premiummail/{serviceid}/forwarding/{email}",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get mailbox forwarding addresses",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "data": [
+              "user0001@aaa.pt",
+              "user0002@aaa.pt"
+            ]
+          },
+          "nickname": "getForwarding",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "serviceid",
+              "description": "Service's unique identifier",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "email",
+              "description": "Email address",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"access denied\"}"
+            },
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/premiummail/{serviceid}/forwarding/{email}",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Enable email forwarding",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "message": "forwarding added"
+          },
+          "nickname": "addForwarding",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "serviceid",
+              "description": "Service's unique identifier",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "email",
+              "description": "Email address",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "addresses",
+              "description": "A list of email addresses to forward to",
+              "required": true,
+              "type": "string[]",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"access denied\"}"
+            },
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/premiummail/{serviceid}/forwarding/{email}",
+      "operations": [
+        {
+          "method": "DEL",
+          "summary": "Disable email forwarding",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "message": "forwarding removed"
+          },
+          "nickname": "removeForwarding",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "serviceid",
+              "description": "Service's unique identifier",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "email",
+              "description": "Email address",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"access denied\"}"
+            },
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/premiummail/{serviceid}/autoreply/{email}",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Get auto-responder settings",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "data": {
+              "enabled": true,
+              "subject": "This is a subject",
+              "body": "This is a auto reply message",
+              "starttimeutc": "2017-01-01T00:00:00.000Z",
+              "endtimeutc": "2017-12-31T00:00:00.000Z",
+              "usetimes": true
+            }
+          },
+          "nickname": "getAutoReply",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "serviceid",
+              "description": "Service's unique identifier",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "email",
+              "description": "Email address",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"access denied\"}"
+            },
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/premiummail/{serviceid}/autoreply/{email}",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Enable auto-responder",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "message": "auto response added"
+          },
+          "nickname": "addAutoReply",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "serviceid",
+              "description": "Service's unique identifier",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "email",
+              "description": "Email address",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "subject",
+              "description": "Auto-response email subject",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "bodymsg",
+              "description": "Auto-response email message body",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "startdate",
+              "description": "Auto-response period start, in Datetime format",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "enddate",
+              "description": "Auto-response period end, in Datetime format",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"access denied\"}"
+            },
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/premiummail/{serviceid}/autoreply/{email}",
+      "operations": [
+        {
+          "method": "DEL",
+          "summary": "Disable auto-responder",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "message": "auto response removed"
+          },
+          "nickname": "removeAutoReply",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "serviceid",
+              "description": "Service's unique identifier",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "email",
+              "description": "Email address",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"access denied\"}"
+            },
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
           ]
         }
       ]
