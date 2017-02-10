@@ -15,7 +15,7 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "Get service's quotas.",
+          "summary": "Get service's quotas",
           "notes": "",
           "type": {
             "result": "ok",
@@ -61,7 +61,7 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "Get service's domains.",
+          "summary": "Get service's domains",
           "notes": "",
           "type": {
             "result": "ok",
@@ -125,7 +125,7 @@
       "operations": [
         {
           "method": "GET",
-          "summary": "Get domain's mailboxes.",
+          "summary": "Get domain's mailboxes",
           "notes": "",
           "type": {
             "result": "ok",
@@ -186,7 +186,7 @@
       "operations": [
         {
           "method": "POST",
-          "summary": "Get domain domains",
+          "summary": "Get domain stats",
           "notes": "",
           "type": {
             "result": "ok",
