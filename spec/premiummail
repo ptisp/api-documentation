@@ -553,14 +553,14 @@
           "parameters": [
             {
               "name": "maxdomainusers",
-              "description": "The maximum number of users the domain is allowed to have. Upgradable only.",
+              "description": "The maximum number of users the domain is allowed to have. Pass -1 for unlimited.",
               "required": false,
               "type": "integer",
               "paramType": "body"
               },
               {
               "name": "maxdomainsize",
-              "description": "The maximum disk space (in MegaByte) the domain is allowed to occupy. Upgradable only.",
+              "description": "The maximum disk space (in MegaByte) the domain is allowed to occupy. Pass -1 for unlimited.",
               "required": false,
               "type": "integer",
               "paramType": "body"
