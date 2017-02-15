@@ -402,14 +402,14 @@
             },
             {
               "name": "maxdomainusers",
-              "description": "The maximum number of users the domain is allowed to have.",
+              "description": "The maximum number of users the domain is allowed to have. Pass -1 for unlimited.",
               "required": true,
               "type": "integer",
               "paramType": "body"
             },
             {
               "name": "maxdomainsize",
-              "description": "The maximum disk space (in MegaByte) the domain is allowed to occupy.",
+              "description": "The maximum disk space (in MegaByte) the domain is allowed to occupy. Pass -1 for unlimited.",
               "required": true,
               "type": "integer",
               "paramType": "body"
