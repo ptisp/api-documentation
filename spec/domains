@@ -360,7 +360,7 @@
       "operations": [
         {
           "method": "POST",
-          "summary": "Create a new contact for the specified domain's TLd",
+          "summary": "Create a new contact for the specified domain's TLD",
           "notes": "",
           "type": {"result": "ok", "nichandle": "nichandle..."},
           "nickname": "contactCreate",
@@ -368,7 +368,7 @@
           "parameters": [
             {
               "name": "domain",
-              "description": "Domain's TLd used to create te contact for",
+              "description": "Domain name, for TLD reference only",
               "required": true,
               "type": "string",
               "paramType": "path"
@@ -376,6 +376,13 @@
             {
               "name": "name",
               "description": "Name",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "city",
+              "description": "City",
               "required": true,
               "type": "string",
               "paramType": "body"
@@ -403,7 +410,7 @@
             },
             {
               "name": "phone",
-              "description": "+XXX.XXXXXXXXX",
+              "description": "Phone number in format +XXX.YYYYYYYYY, where X group stands for international country calling code and Y group for phone number)",
               "required": true,
               "type": "string",
               "paramType": "body"
@@ -418,7 +425,7 @@
             {
               "name": "password",
               "description": "Password",
-              "required": true,
+              "required": false,
               "type": "string",
               "paramType": "body"
             },
