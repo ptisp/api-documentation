@@ -76,7 +76,15 @@
                 "lastchanged": "0001-01-01T00:00:00.000Z",
                 "sizemb": "0",
                 "filestoragesizemb": "0",
-                "status": "Enabled"
+                "status": "Enabled",
+                "maxaliases": 0,
+                "maxdomainaliases": 0,
+                "maxlists": 0,
+                "maxdomainsizeinmb": "10240",
+                "maxdomainusers": 10,
+                "maxmailboxsizeinmb": 0,
+                "maxmessagesize": 0,
+                "maxrecipients": 0
               },
               {
                 "name": "bbb.pt",
@@ -88,7 +96,13 @@
                 "lastchanged": "0001-01-01T00:00:00.000Z",
                 "sizemb": "0",
                 "filestoragesizemb": "0",
-                "status": "Enabled"
+                "status": "Enabled",
+                "maxaliases": 0,
+                "maxdomainaliases": 0,
+                "maxlists": 0,
+                "maxmailboxsizeinmb": 0,
+                "maxmessagesize": 0,
+                "maxrecipients": 0
               }
             ]
           },
@@ -323,7 +337,15 @@
               "lastchanged": "0001-01-01T00:00:00.000Z",
               "sizemb": "0",
               "filestoragesizemb": "0",
-              "status": "Enabled"
+              "status": "Enabled",
+              "maxaliases": 0,
+              "maxdomainaliases": 0,
+              "maxlists": 0,
+              "maxdomainsizeinmb": "10240",
+              "maxdomainusers": 10,
+              "maxmailboxsizeinmb": 0,
+              "maxmessagesize": 0,
+              "maxrecipients": 0
             }
           },
           "nickname": "getDomain",

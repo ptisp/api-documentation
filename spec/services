@@ -98,63 +98,6 @@
           ]
         }
       ]
-    },
-    {
-      "path": "/services/{serviceid}/update",
-      "operations": [
-        {
-          "method": "GET",
-          "summary": "Service Update",
-          "notes": "",
-          "type": {
-            "result": "ok",
-            "price": "xxx.xx",
-            "invoice": "xxxxxx"
-          },
-          "nickname": "serviceUpdate",
-          "consumes": [
-            "application/json"
-          ],
-          "authorizations": {
-          },
-          "parameters": [
-            {
-              "name": "serviceid",
-              "description": "Service id",
-              "required": true,
-              "type": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "productid",
-              "description": "Product id",
-              "required": true,
-              "type": "string",
-              "paramType": "body"
-            },
-            {
-              "name": "months",
-              "description": "Periodicy",
-              "required": true,
-              "type": "Integer",
-              "paramType": "body"
-            },
-            {
-              "name": "simulate",
-              "description": "Simulate only (Does not generate invoice)",
-              "required": false,
-              "type": "string",
-              "paramType": "body"
-            }
-          ],
-          "responseMessages": [
-            {
-              "code": 500,
-              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
-            }
-          ]
-        }
-      ]
     }
   ],
   "models": {

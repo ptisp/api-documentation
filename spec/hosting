@@ -21,7 +21,7 @@
             "result":"ok",
             "products":
             [
-              { 
+              {
                 "identifier": "xxxxx",
                 "name": "Linux Profissional",
                 "domain": "chucknorris.com.pt",
@@ -29,7 +29,7 @@
                 "nextduedate": "YYYY-MM-DD",
                 "status": "Pending"
               }
-            ] 
+            ]
           },
           "nickname": "hostingList",
           "consumes": [
@@ -70,13 +70,13 @@
                 "mainip": "127.0.0.1",
                 "amount": "9.99",
                 "extras": [
-                  { "option": "Ip address", 
+                  { "option": "Ip address",
                     "value": "1"
                   },
-                  { "option": "WHMCS", 
+                  { "option": "WHMCS",
                     "value": "0"
                   },
-                  { "option": "Managed Hosting", 
+                  { "option": "Managed Hosting",
                     "value": "1"
                   }
                 ]
@@ -111,7 +111,7 @@
             "result":"ok",
             "pricing":
             [
-              { 
+              {
                 "1": "1.00",
                 "3": "2.00",
                 "6": "3.00",
@@ -181,7 +181,7 @@
             "result":"ok",
             "pricing":
             [
-              { 
+              {
                 "1": "1.00",
                 "3": "2.00",
                 "6": "3.00",
@@ -236,6 +236,63 @@
               "required": true,
               "type": "string",
               "paramType": "path"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/hosting/{hostingid}/update",
+      "operations": [
+        {
+          "method": "GET",
+          "summary": "Hosting Update",
+          "notes": "",
+          "type": {
+            "result": "ok",
+            "price": "xxx.xx",
+            "invoice": "xxxxxx"
+          },
+          "nickname": "hostingUpdate",
+          "consumes": [
+            "application/json"
+          ],
+          "authorizations": {
+          },
+          "parameters": [
+            {
+              "name": "hostingid",
+              "description": "Hosting id",
+              "required": true,
+              "type": "string",
+              "paramType": "path"
+            },
+            {
+              "name": "productid",
+              "description": "Product id",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "months",
+              "description": "Periodicy",
+              "required": true,
+              "type": "Integer",
+              "paramType": "body"
+            },
+            {
+              "name": "simulate",
+              "description": "Pass \"yes\" to simulate only (Does not generate invoice)",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
             }
           ],
           "responseMessages": [
