@@ -22,7 +22,7 @@
       window.swaggerUi = new SwaggerUi({
       url: "https://api.ptisp.pt/specification",
       dom_id: "swagger-ui-container",
-      supportedSubmitMethods: ['get', 'post'],
+      supportedSubmitMethods: ['get', 'post', 'delete'],
       onComplete: function(swaggerApi, swaggerUi){
         $('pre code').each(function(i, e) {
           hljs.highlightBlock(e)
