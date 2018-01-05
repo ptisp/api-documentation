@@ -145,7 +145,7 @@
             "description": "A valid domain name or hostname.",
             "required": true,
             "type": "string",
-            "paramType": "path"
+            "paramType": "body"
           },
           {
             "name": "class",
