@@ -9,543 +9,1153 @@
   "authorizations": {
 
   },
-  "apis": [
-  	{
+  "apis": [{
       "path": "/parking/{domain}/park",
-      "operations": [
-        {
-          "method": "POST",
-          "summary": "Park domain",
-          "notes": "",
-          "type": {
-          	"result":"ok",
-            "domain": "as24768.net"
-          },
-          "nickname": "parkingPark",
-          "authorizations": {},
-          "parameters": [
-            {
-              "name": "domain",
-              "description": "Domain name",
-              "required": true,
-              "type": "string",
-              "paramType": "path"
-            }
-          ],
-          "responseMessages": [
-            {
-              "code": 500,
-              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
-            }
-          ]
-        }
-      ]
+      "operations": [{
+        "method": "POST",
+        "summary": "Park domain",
+        "notes": "",
+        "type": {
+          "result": "ok",
+          "domain": "as24768.net"
+        },
+        "nickname": "parkingPark",
+        "authorizations": {},
+        "parameters": [{
+          "name": "domain",
+          "description": "Domain name",
+          "required": true,
+          "type": "string",
+          "paramType": "path"
+        }],
+        "responseMessages": [{
+          "code": 500,
+          "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+        }]
+      }]
     },
     {
       "path": "/parking/{domain}/unpark",
-      "operations": [
-        {
-          "method": "POST",
-          "summary": "Unpark domain",
-          "notes": "",
-          "type": {
-          	"result":"ok",
-            "domain": "as24768.net"
-          },
-          "nickname": "parkingUnpark",
-          "authorizations": {},
-          "parameters": [
-            {
-              "name": "domain",
-              "description": "Domain name",
-              "required": true,
-              "type": "string",
-              "paramType": "path"
-            }
-          ],
-          "responseMessages": [
-            {
-              "code": 500,
-              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
-            }
-          ]
-        }
-      ]
+      "operations": [{
+        "method": "POST",
+        "summary": "Unpark domain",
+        "notes": "",
+        "type": {
+          "result": "ok",
+          "domain": "as24768.net"
+        },
+        "nickname": "parkingUnpark",
+        "authorizations": {},
+        "parameters": [{
+          "name": "domain",
+          "description": "Domain name",
+          "required": true,
+          "type": "string",
+          "paramType": "path"
+        }],
+        "responseMessages": [{
+          "code": 500,
+          "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+        }]
+      }]
     },
     {
       "path": "/parking/{domain}/dns/list",
-      "operations": [
-        {
-          "method": "GET",
-          "summary": "Get domain parking zones",
-          "notes": "",
-          "type": {
-          	"result":"ok",
-          	"records":[
-          		{
-          			"nsdname": "ns2.mydnspt.net",
-          			"ttl": "86400",
-          			"type": "NS",
-          			"name": "as24768.net",
-          			"class": "IN",
-          			"line": "xx"
-          		},
-          		{
-          			"address": "127.0.0.1",
-          			"ttl": "14400",
-          			"type": "A",
-          			"name": "as24768.net",
-          			"class": "IN",
-          			"line": "xx"
-          		},
-          		{
-          			"exchange": "as24768.net",
-          			"ttl": "14400",
-          			"type": "MX",
-          			"preference": "x",
-          			"name": "as24768.net",
-          			"class": "IN",
-          			"line": "xx"
-          		},
-          		{
-          			"cname": "as24768.net",
-          			"ttl": "14400",
-          			"type": "CNAME",
-          			"name": "mail.as24768.net",
-          			"class": "IN",
-          			"line": "xx"
-          		}
-          	],
-            "domain": "as24768.net"
-          },
-          "nickname": "parkingDnsZones",
-          "authorizations": {},
-          "consumes": [
-            "application/json"
-          ],
-          "parameters": [
+      "operations": [{
+        "method": "GET",
+        "summary": "Get domain parking zones",
+        "notes": "",
+        "type": {
+          "result": "ok",
+          "records": [{
+              "nsdname": "ns2.mydnspt.net",
+              "ttl": "86400",
+              "type": "NS",
+              "name": "as24768.net",
+              "class": "IN",
+              "line": "xx"
+            },
             {
-              "name": "domain",
-              "description": "Domain name",
-              "required": true,
-              "type": "string",
-              "paramType": "path"
+              "address": "127.0.0.1",
+              "ttl": "14400",
+              "type": "A",
+              "name": "as24768.net",
+              "class": "IN",
+              "line": "xx"
+            },
+            {
+              "exchange": "as24768.net",
+              "ttl": "14400",
+              "type": "MX",
+              "preference": "x",
+              "name": "as24768.net",
+              "class": "IN",
+              "line": "xx"
+            },
+            {
+              "cname": "as24768.net",
+              "ttl": "14400",
+              "type": "CNAME",
+              "name": "mail.as24768.net",
+              "class": "IN",
+              "line": "xx"
             }
           ],
-          "responseMessages": [
-            {
-              "code": 500,
-              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
-            }
-          ]
-        }
-      ]
+          "domain": "as24768.net"
+        },
+        "nickname": "parkingDnsZones",
+        "authorizations": {},
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [{
+          "name": "domain",
+          "description": "Domain name",
+          "required": true,
+          "type": "string",
+          "paramType": "path"
+        }],
+        "responseMessages": [{
+          "code": 500,
+          "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+        }]
+      }]
     },
     {
       "path": "/parking/{domain}/dns/add",
-      "operations": [
-        {
-          "method": "POST",
-          "summary": "Add dns record to parked domain",
-          "notes": "",
-          "type": {
-          	"result":"ok",
-            "message": "dns record added"
+      "operations": [{
+        "method": "POST",
+        "summary": "Add dns record to parked domain",
+        "notes": "",
+        "type": {
+          "result": "ok",
+          "message": "dns record added"
+        },
+        "nickname": "parkingAddZone",
+        "authorizations": {},
+        "parameters": [{
+            "name": "domain",
+            "description": "A valid domain name on the server",
+            "required": true,
+            "type": "string",
+            "paramType": "path"
           },
-          "nickname": "parkingAddZone",
-          "authorizations": {},
-          "parameters": [
-            {
-              "name": "domain",
-              "description": "Domain name",
-              "required": true,
-              "type": "string",
-              "paramType": "path"
-            }
-          ],
-          "responseMessages": [
-            {
-              "code": 500,
-              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
-            }
-          ]
-        }
-      ]
+          {
+            "name": "name",
+            "description": "A valid domain name or hostname.",
+            "required": true,
+            "type": "string",
+            "paramType": "path"
+          },
+          {
+            "name": "class",
+            "description": "The record's class (Example: IN)",
+            "required": true,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "type",
+            "description": "The DNS record type (A, CNAME, MX, TXT, NS, SRV, etc). Warning: this parameter determines the additional parameters that you must include",
+            "required": true,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "ttl",
+            "description": "A positive integer that represents the TTL, in seconds. Default: 86400",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "address",
+            "description": "The zone record's address. Warning: Must be included in A and AAAA records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "cname",
+            "description": "The canonical name (CNAME) alias.  Warning: must be included in CNAME records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "flatten",
+            "description": "Whether to resolve the specified CNAME value with the record's IP address. Warning: must be included in CNAME records",
+            "required": false,
+            "type": "boolean",
+            "paramType": "body"
+          },
+          {
+            "name": "flatten_to",
+            "description": "The IP address that the specified CNAME will resolve to. Warning: You must use the flatten parameter with this parameter, in CNAME records.",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "preference",
+            "description": "The record's preference. Warning: must be included in MX records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "exchange",
+            "description": "The server's location's canonical name (CNAME). Warning: must be included in MX records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "nsdname",
+            "description": "The domain's authoritative nameserver. Warning: must be included in NS records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "priority",
+            "description": "The target host's preference. Warning: must be included in SRV records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "weight",
+            "description": "A relative weight. The system uses this value to rank entries with the same priority value. Warning: must be included in SRV records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "port",
+            "description": "The target host's port. Warning: must be included in SRV records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "target",
+            "description": "The service's target host. Warning: must be included in SRV records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "txtdata",
+            "description": "The TXT record's data. Surround this string with quotes (\"\"). Warning: must be included in TXT records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "unencoded",
+            "description": "Whether the TXT record's data is encoded. Warning: must be included in TXT records",
+            "required": false,
+            "type": "boolean",
+            "paramType": "body"
+          },
+          {
+            "name": "prefix",
+            "description": "The record's prefix length, positive integer.  Warning: must be included in A6 records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "refer",
+            "description": "The record's address suffix. Warning: must be included in A6 records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "subtype",
+            "description": "The AFS cell type. Warning: must be included in AFSDB records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "hostname",
+            "description": "The database servers' hostname. Warning: must be included in AFSDB records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "flag",
+            "description": "Whether the Certificate Authority (CA) will issue an SSL certificate if the CAA resource record contains unknown property tags. 0 — Non-critical, 1 — Critical. Warning: must be included in CAA records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "tag",
+            "description": "The CAA record's property type. Warning: must be included in CAA records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "value",
+            "description": "The CA's domain or URL. Warning: must be included in CAA records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "dname",
+            "description": "The delegation name (DNAME) alias. Warning: must be included in DNAME records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "keyname",
+            "description": "The record's KeyTag value. Warning: must be included in DS records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "algorithm",
+            "description": "The record's algorithm number. Warning: must be included in DS records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "digitype",
+            "description": "The record's digest type. Warning: must be included in DS records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "cpu",
+            "description": "The host's CPU type. Warning: must be included in HINFO records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "os",
+            "description": "The host's operating system. Warning: must be included in HINFO records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+
+          {
+            "name": "version",
+            "description": "The record's version number. Warning: must be included in LOC records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "size",
+            "description": "The diameter of a sphere that encloses the entire location. Warning: must be included in LOC records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "horiz_pre",
+            "description": "  The location's horizontal precision. Warning: must be included in LOC records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "vert_pre",
+            "description": "The location's vertical precision. Warning: must be included in LOC records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "latitude",
+            "description": "The location's latitude. Warning: must be included in LOC records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "longitude",
+            "description": "The location's longitude. Warning: must be included in LOC records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "altitude",
+            "description": "The location's altitude. Warning: must be included in LOC records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "ptrdname",
+            "description": "A pointer to a canonical name (CNAME). Warning: must be included in PTR records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "mbox",
+            "description": "The Responsible Person's (RP's) email address. Warning: must be included in RP records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "txtdname",
+            "description": "The RP's domain name. Warning: must be included in RP records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "serial",
+            "description": "The zone file's revision number. Warning: must be included in SOA records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "mname",
+            "description": "The domain's authoritative nameserver.. Warning: must be included in SOA records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "retry",
+            "description": "The amount of time to wait before the secondary server retries a failed zone transfer. Warning: must be included in SOA records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "refresh",
+            "description": "The amount of time to wait before the secondary DNS server queries the primary DNS server's SOA records for changes. Warning: must be included in SOA records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "Lines",
+            "description": "The number of lines in the SOA section. Warning: must be included in SOA records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "expire",
+            "description": "The amount of time to wait before the secondary server attempts to complete a zone transfer. Warning: must be included in SOA records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "rname",
+            "description": "The Responsible Person's (RP's) email address. Warning: must be included in SOA records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "algorithm",
+            "description": "TThe public key's algorithm number. Warning: must be included in SSHFP records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "fptype",
+            "description": "The public key's fingerprint type. Warning: must be included in SSHFP records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          }
+        ],
+        "responseMessages": [{
+          "code": 500,
+          "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+        }]
+      }]
     },
     {
       "path": "/parking/{domain}/dns/{line}/delete",
-      "operations": [
-        {
-          "method": "POST",
-          "summary": "Delete dns record from parked domain",
-          "notes": "",
-          "type": {
-          	"result":"ok",
-            "message": "dns record removed"
+      "operations": [{
+        "method": "POST",
+        "summary": "Delete dns record from parked domain",
+        "notes": "",
+        "type": {
+          "result": "ok",
+          "message": "dns record removed"
+        },
+        "nickname": "parkingRemoveZone",
+        "authorizations": {},
+        "parameters": [{
+            "name": "domain",
+            "description": "Domain name",
+            "required": true,
+            "type": "string",
+            "paramType": "path"
           },
-          "nickname": "parkingRemoveZone",
-          "authorizations": {},
-          "parameters": [
-            {
-              "name": "domain",
-              "description": "Domain name",
-              "required": true,
-              "type": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "line",
-              "description": "Line number",
-              "required": true,
-              "type": "string",
-              "paramType": "path"
-            }
-          ],
-          "responseMessages": [
-            {
-              "code": 500,
-              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
-            }
-          ]
-        }
-      ]
+          {
+            "name": "line",
+            "description": "A positive integer that represents a line number in the domain's DNS zone file.",
+            "required": true,
+            "type": "string",
+            "paramType": "path"
+          }
+        ],
+        "responseMessages": [{
+          "code": 500,
+          "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+        }]
+      }]
     },
     {
       "path": "/parking/{domain}/dns/{line}/edit",
-      "operations": [
-        {
-          "method": "POST",
-          "summary": "Edits dns record from parked domain",
-          "notes": "",
-          "type": {
-          	"result":"ok",
-            "message": "dns record updated"
+      "operations": [{
+        "method": "POST",
+        "summary": "Edits dns record from parked domain",
+        "notes": "",
+        "type": {
+          "result": "ok",
+          "message": "dns record updated"
+        },
+        "nickname": "parkingEditZone",
+        "authorizations": {},
+        "parameters": [{
+            "name": "domain",
+            "description": "The zone record's domain.",
+            "required": true,
+            "type": "string",
+            "paramType": "path"
           },
-          "nickname": "parkingEditZone",
-          "authorizations": {},
-          "parameters": [
-            {
-              "name": "domain",
-              "description": "Domain name",
-              "required": true,
-              "type": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "line",
-              "description": "Line number",
-              "required": true,
-              "type": "string",
-              "paramType": "path"
-            }
-          ],
-          "responseMessages": [
-            {
-              "code": 500,
-              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
-            }
-          ]
-        }
-      ]
+          {
+            "name": "line",
+            "description": "A positive integer that represents a line number in the domain's DNS zone file.",
+            "required": true,
+            "type": "string",
+            "paramType": "path"
+          },
+          {
+            "name": "name",
+            "description": "A valid domain name or hostname.",
+            "required": true,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "class",
+            "description": "The record's class.",
+            "required": true,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "ttl",
+            "description": "The record's time to live (TTL).",
+            "required": true,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "type",
+            "description": "The DNS record type (A, CNAME, MX, TXT, NS, SRV, etc). Warning: The DNS record type determines the additional DNS zone record parameters that you must include.",
+            "required": true,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "address",
+            "description": "The zone record's address. Warning: Must be included in A and AAAA records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "cname",
+            "description": "The canonical name (CNAME) alias.  Warning: must be included in CNAME records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "flatten",
+            "description": "Whether to resolve the specified CNAME value with the record's IP address. Warning: must be included in CNAME records",
+            "required": false,
+            "type": "boolean",
+            "paramType": "body"
+          },
+          {
+            "name": "flatten_to",
+            "description": "The IP address that the specified CNAME will resolve to. Warning: You must use the flatten parameter with this parameter, in CNAME records.",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "preference",
+            "description": "The record's preference. Warning: must be included in MX records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "exchange",
+            "description": "The server's location's canonical name (CNAME). Warning: must be included in MX records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "nsdname",
+            "description": "The domain's authoritative nameserver. Warning: must be included in NS records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "priority",
+            "description": "The target host's preference. Warning: must be included in SRV records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "weight",
+            "description": "A relative weight. The system uses this value to rank entries with the same priority value. Warning: must be included in SRV records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "port",
+            "description": "The target host's port. Warning: must be included in SRV records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "target",
+            "description": "The service's target host. Warning: must be included in SRV records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "txtdata",
+            "description": "The TXT record's data. Surround this string with quotes (\"\"). Warning: must be included in TXT records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "unencoded",
+            "description": "Whether the TXT record's data is encoded. Warning: must be included in TXT records",
+            "required": false,
+            "type": "boolean",
+            "paramType": "body"
+          },
+          {
+            "name": "prefix",
+            "description": "The record's prefix length, positive integer.  Warning: must be included in A6 records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "refer",
+            "description": "The record's address suffix. Warning: must be included in A6 records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "subtype",
+            "description": "The AFS cell type. Warning: must be included in AFSDB records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "hostname",
+            "description": "The database servers' hostname. Warning: must be included in AFSDB records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "flag",
+            "description": "Whether the Certificate Authority (CA) will issue an SSL certificate if the CAA resource record contains unknown property tags. 0 — Non-critical, 1 — Critical. Warning: must be included in CAA records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "tag",
+            "description": "The CAA record's property type. Warning: must be included in CAA records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "value",
+            "description": "The CA's domain or URL. Warning: must be included in CAA records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "dname",
+            "description": "The delegation name (DNAME) alias. Warning: must be included in DNAME records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "keyname",
+            "description": "The record's KeyTag value. Warning: must be included in DS records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "algorithm",
+            "description": "The record's algorithm number. Warning: must be included in DS records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "digitype",
+            "description": "The record's digest type. Warning: must be included in DS records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "cpu",
+            "description": "The host's CPU type. Warning: must be included in HINFO records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "os",
+            "description": "The host's operating system. Warning: must be included in HINFO records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+
+          {
+            "name": "version",
+            "description": "The record's version number. Warning: must be included in LOC records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "size",
+            "description": "The diameter of a sphere that encloses the entire location. Warning: must be included in LOC records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "horiz_pre",
+            "description": "  The location's horizontal precision. Warning: must be included in LOC records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "vert_pre",
+            "description": "The location's vertical precision. Warning: must be included in LOC records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "latitude",
+            "description": "The location's latitude. Warning: must be included in LOC records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "longitude",
+            "description": "The location's longitude. Warning: must be included in LOC records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "altitude",
+            "description": "The location's altitude. Warning: must be included in LOC records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "ptrdname",
+            "description": "A pointer to a canonical name (CNAME). Warning: must be included in PTR records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "mbox",
+            "description": "The Responsible Person's (RP's) email address. Warning: must be included in RP records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "txtdname",
+            "description": "The RP's domain name. Warning: must be included in RP records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "serial",
+            "description": "The zone file's revision number. Warning: must be included in SOA records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "mname",
+            "description": "The domain's authoritative nameserver. Warning: must be included in SOA records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "retry",
+            "description": "The amount of time to wait before the secondary server retries a failed zone transfer. Warning: must be included in SOA records",
+            "required": false,
+            "type": "integer",
+            "paramType": "body"
+          },
+          {
+            "name": "refresh",
+            "description": "The amount of time to wait before the secondary DNS server queries the primary DNS server's SOA records for changes. Warning: must be included in SOA records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "Lines",
+            "description": "The number of lines in the SOA section. Warning: must be included in SOA records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "expire",
+            "description": "The amount of time to wait before the secondary server attempts to complete a zone transfer. Warning: must be included in SOA records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "rname",
+            "description": "The Responsible Person's (RP's) email address. Warning: must be included in SOA records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "algorithm",
+            "description": "The public key's algorithm number. Warning: must be included in SSHFP records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "fptype",
+            "description": "The public key's fingerprint type. Warning: must be included in SSHFP records",
+            "required": false,
+            "type": "string",
+            "paramType": "body"
+          }
+        ],
+        "responseMessages": [{
+          "code": 500,
+          "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+        }]
+      }]
     },
     {
       "path": "/parking/{domain}/redirect",
-      "operations": [
-        {
-          "method": "GET",
-          "summary": "Get parked domain redirects",
-          "notes": "",
-          "type": {
-          	"result":"ok",
-          	"records":[
-          		{
-          			"_id": "xxxxx",
-          			"domain": "as24768.net",
-          			"destination": "127.0.0.1",
-          			"title": "xxxxx"
-          		}
-          	],
-            "domain": "as24768.net"
-          },
-          "nickname": "parkingRedirect",
-          "authorizations": {},
-          "consumes": [
-            "application/json"
-          ],
-          "parameters": [
-            {
-              "name": "domain",
-              "description": "Domain name",
-              "required": true,
-              "type": "string",
-              "paramType": "path"
-            }
-          ],
-          "responseMessages": [
-            {
-              "code": 500,
-              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
-            }
-          ]
-        }
-      ]
+      "operations": [{
+        "method": "GET",
+        "summary": "Get parked domain redirects",
+        "notes": "",
+        "type": {
+          "result": "ok",
+          "records": [{
+            "_id": "xxxxx",
+            "domain": "as24768.net",
+            "destination": "127.0.0.1",
+            "title": "xxxxx"
+          }],
+          "domain": "as24768.net"
+        },
+        "nickname": "parkingRedirect",
+        "authorizations": {},
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [{
+          "name": "domain",
+          "description": "Domain name",
+          "required": true,
+          "type": "string",
+          "paramType": "path"
+        }],
+        "responseMessages": [{
+          "code": 500,
+          "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+        }]
+      }]
     },
     {
       "path": "/parking/{domain}/redirect",
-      "operations": [
-        {
-          "method": "POST",
-          "summary": "Adds redirect to parked domain",
-          "notes": "",
-          "type": {
-          	"result":"ok",
-            "message": "redirect added"
+      "operations": [{
+        "method": "POST",
+        "summary": "Adds redirect to parked domain",
+        "notes": "",
+        "type": {
+          "result": "ok",
+          "message": "redirect added"
+        },
+        "nickname": "parkingRedirectAdd",
+        "authorizations": {},
+        "parameters": [{
+            "name": "domain",
+            "description": "Domain name",
+            "required": true,
+            "type": "string",
+            "paramType": "path"
           },
-          "nickname": "parkingRedirectAdd",
-          "authorizations": {},
-          "parameters": [
-            {
-              "name": "domain",
-              "description": "Domain name",
-              "required": true,
-              "type": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "destination",
-              "description": "Redirect destination",
-              "required": true,
-              "type": "string",
-              "paramType": "body"
-            },
-            {
-              "name": "title",
-              "description": "Redirect title",
-              "required": true,
-              "type": "string",
-              "paramType": "body"
-            }
-          ],
-          "responseMessages": [
-            {
-              "code": 500,
-              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
-            }
-          ]
-        }
-      ]
+          {
+            "name": "destination",
+            "description": "Redirect destination",
+            "required": true,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "title",
+            "description": "Redirect title",
+            "required": true,
+            "type": "string",
+            "paramType": "body"
+          }
+        ],
+        "responseMessages": [{
+          "code": 500,
+          "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+        }]
+      }]
     },
     {
       "path": "/parking/{domain}/redirect/delete",
-      "operations": [
-        {
-          "method": "POST",
-          "summary": "Remove redirect from parked domain",
-          "notes": "",
-          "type": {
-          	"result":"ok",
-            "message": "redirect removed"
-          },
-          "nickname": "parkingRedirectRemove",
-          "authorizations": {},
-          "parameters": [
-            {
-              "name": "domain",
-              "description": "Domain name",
-              "required": true,
-              "type": "string",
-              "paramType": "path"
-            }
-          ],
-          "responseMessages": [
-            {
-              "code": 500,
-              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
-            }
-          ]
-        }
-      ]
+      "operations": [{
+        "method": "POST",
+        "summary": "Remove redirect from parked domain",
+        "notes": "",
+        "type": {
+          "result": "ok",
+          "message": "redirect removed"
+        },
+        "nickname": "parkingRedirectRemove",
+        "authorizations": {},
+        "parameters": [{
+          "name": "domain",
+          "description": "Domain name",
+          "required": true,
+          "type": "string",
+          "paramType": "path"
+        }],
+        "responseMessages": [{
+          "code": 500,
+          "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+        }]
+      }]
     },
     {
       "path": "/parking/{domain}/emails/add",
-      "operations": [
-        {
-          "method": "POST",
-          "summary": "Add email account",
-          "notes": "",
-          "type": {
-          	"result":"ok",
-            "message": "email account added"
+      "operations": [{
+        "method": "POST",
+        "summary": "Add email account",
+        "notes": "",
+        "type": {
+          "result": "ok",
+          "message": "email account added"
+        },
+        "nickname": "parkingAddMail",
+        "authorizations": {},
+        "parameters": [{
+            "name": "domain",
+            "description": "Domain name",
+            "required": true,
+            "type": "string",
+            "paramType": "path"
           },
-          "nickname": "parkingAddMail",
-          "authorizations": {},
-          "parameters": [
-            {
-              "name": "domain",
-              "description": "Domain name",
-              "required": true,
-              "type": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "email",
-              "description": "Email",
-              "required": true,
-              "type": "string",
-              "paramType": "body"
-            },
-            {
-              "name": "password",
-              "description": "Email password",
-              "required": true,
-              "type": "string",
-              "paramType": "body"
-            }
-          ],
-          "responseMessages": [
-            {
-              "code": 500,
-              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
-            }
-          ]
-        }
-      ]
+          {
+            "name": "email",
+            "description": "Email",
+            "required": true,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "password",
+            "description": "Email password",
+            "required": true,
+            "type": "string",
+            "paramType": "body"
+          }
+        ],
+        "responseMessages": [{
+          "code": 500,
+          "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+        }]
+      }]
     },
     {
       "path": "/parking/{domain}/emails/edit",
-      "operations": [
-        {
-          "method": "POST",
-          "summary": "Edit email account",
-          "notes": "",
-          "type": {
-          	"result":"ok",
-            "message": "password changed"
+      "operations": [{
+        "method": "POST",
+        "summary": "Edit email account",
+        "notes": "",
+        "type": {
+          "result": "ok",
+          "message": "password changed"
+        },
+        "nickname": "parkingEditMail",
+        "authorizations": {},
+        "parameters": [{
+            "name": "domain",
+            "description": "Domain name",
+            "required": true,
+            "type": "string",
+            "paramType": "path"
           },
-          "nickname": "parkingEditMail",
-          "authorizations": {},
-          "parameters": [
-            {
-              "name": "domain",
-              "description": "Domain name",
-              "required": true,
-              "type": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "email",
-              "description": "Email",
-              "required": true,
-              "type": "string",
-              "paramType": "body"
-            },
-            {
-              "name": "password",
-              "description": "Email password",
-              "required": true,
-              "type": "string",
-              "paramType": "body"
-            }
-          ],
-          "responseMessages": [
-            {
-              "code": 500,
-              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
-            }
-          ]
-        }
-      ]
+          {
+            "name": "email",
+            "description": "Email",
+            "required": true,
+            "type": "string",
+            "paramType": "body"
+          },
+          {
+            "name": "password",
+            "description": "Email password",
+            "required": true,
+            "type": "string",
+            "paramType": "body"
+          }
+        ],
+        "responseMessages": [{
+          "code": 500,
+          "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+        }]
+      }]
     },
     {
       "path": "/parking/{domain}/emails/list",
-      "operations": [
-        {
-          "method": "GET",
-          "summary": "List parked domain Emails",
-          "notes": "",
-          "type": {
-          	"result":"ok",
-          	"records":[
-          		{
-          			"domain": "as24768.net",
-								"txtdiskquota": "1024",
-								"diskquota": "1024",
-								"user": "test",
-								"diskused": "0",
-								"_diskquota": "1073741824",
-								"diskusedpercent": "0",
-								"login": "test@as24768.net",
-								"humandiskquota": "1 GB",
-								"_diskused": "0",
-								"email": "test@as24768.net",
-								"diskusedpercent20": "0",
-								"humandiskused": "None",
-								"mtime": "1409916949"
-          		}
-          	]
-          },
-          "nickname": "parkingMailList",
-          "authorizations": {},
-          "consumes": [
-            "application/json"
-          ],
-          "parameters": [
-            {
-              "name": "domain",
-              "description": "Domain name",
-              "required": true,
-              "type": "string",
-              "paramType": "path"
-            }
-          ],
-          "responseMessages": [
-            {
-              "code": 500,
-              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
-            }
-          ]
-        }
-      ]
+      "operations": [{
+        "method": "GET",
+        "summary": "List parked domain Emails",
+        "notes": "",
+        "type": {
+          "result": "ok",
+          "records": [{
+            "domain": "as24768.net",
+            "txtdiskquota": "1024",
+            "diskquota": "1024",
+            "user": "test",
+            "diskused": "0",
+            "_diskquota": "1073741824",
+            "diskusedpercent": "0",
+            "login": "test@as24768.net",
+            "humandiskquota": "1 GB",
+            "_diskused": "0",
+            "email": "test@as24768.net",
+            "diskusedpercent20": "0",
+            "humandiskused": "None",
+            "mtime": "1409916949"
+          }]
+        },
+        "nickname": "parkingMailList",
+        "authorizations": {},
+        "consumes": [
+          "application/json"
+        ],
+        "parameters": [{
+          "name": "domain",
+          "description": "Domain name",
+          "required": true,
+          "type": "string",
+          "paramType": "path"
+        }],
+        "responseMessages": [{
+          "code": 500,
+          "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+        }]
+      }]
     },
     {
       "path": "/parking/{domain}/emails/delete",
-      "operations": [
-        {
-          "method": "POST",
-          "summary": "Remove email account",
-          "notes": "",
-          "type": {
-          	"result":"ok",
-            "message": "email account removed"
+      "operations": [{
+        "method": "POST",
+        "summary": "Remove email account",
+        "notes": "",
+        "type": {
+          "result": "ok",
+          "message": "email account removed"
+        },
+        "nickname": "parkingEditMail",
+        "authorizations": {},
+        "parameters": [{
+            "name": "domain",
+            "description": "Domain name",
+            "required": true,
+            "type": "string",
+            "paramType": "path"
           },
-          "nickname": "parkingEditMail",
-          "authorizations": {},
-          "parameters": [
-            {
-              "name": "domain",
-              "description": "Domain name",
-              "required": true,
-              "type": "string",
-              "paramType": "path"
-            },
-            {
-              "name": "email",
-              "description": "Email",
-              "required": true,
-              "type": "string",
-              "paramType": "body"
-            }
-          ],
-          "responseMessages": [
-            {
-              "code": 500,
-              "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
-            }
-          ]
-        }
-      ]
+          {
+            "name": "email",
+            "description": "Email",
+            "required": true,
+            "type": "string",
+            "paramType": "body"
+          }
+        ],
+        "responseMessages": [{
+          "code": 500,
+          "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+        }]
+      }]
     }
   ],
-  "models": {
-  }
+  "models": {}
 }
