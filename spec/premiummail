@@ -74,15 +74,14 @@
                 "domainaliascount": 0,
                 "listcount": 0,
                 "lastchanged": "0001-01-01T00:00:00.000Z",
-                "sizemb": "0",
-                "filestoragesizemb": "0",
+                "sizemb": 0,
+                "filestoragesizemb": 0,
                 "status": "Enabled",
                 "maxaliases": 0,
                 "maxdomainaliases": 0,
                 "maxlists": 0,
-                "maxdomainsizeinmb": "10240",
+                "maxdomainsizeinmb": 10240,
                 "maxdomainusers": 10,
-                "maxmailboxsizeinmb": 0,
                 "maxmessagesize": 0,
                 "maxrecipients": 0
               },
@@ -94,15 +93,14 @@
                 "domainaliascount": 0,
                 "listcount": 0,
                 "lastchanged": "0001-01-01T00:00:00.000Z",
-                "sizemb": "0",
-                "filestoragesizemb": "0",
+                "sizemb": 0,
+                "filestoragesizemb": 0,
                 "status": "Enabled",
                 "maxaliases": 0,
                 "maxdomainaliases": 0,
                 "maxlists": 0,
-                "maxdomainsizeinmb": "10240",
+                "maxdomainsizeinmb": 10240,
                 "maxdomainusers": 10,
-                "maxmailboxsizeinmb": 0,
                 "maxmessagesize": 0,
                 "maxrecipients": 0
               }
@@ -207,11 +205,11 @@
           "type": {
             "result": "ok",
             "data": {
-              "messagesreceived": "0",
-              "messagessent": "0",
-              "bytesreceived": "0",
-              "bytessent": "0",
-              "bytessize": "0"
+              "messagesreceived": 0,
+              "messagessent": 0,
+              "bytesreceived": 0,
+              "bytessent": 0,
+              "bytessize": 0
             }
           },
           "nickname": "getDomainStats",
@@ -276,12 +274,12 @@
               {
                 "username": "admin",
                 "maxspace": 100,
-                "currentspace": "0"
+                "currentspace": 100
               },
               {
                 "username": "user0002",
                 "maxspace": 2048,
-                "currentspace": "0"
+                "currentspace": 200
               }
             ]
           },
@@ -337,15 +335,14 @@
               "domainaliascount": 0,
               "listcount": 0,
               "lastchanged": "0001-01-01T00:00:00.000Z",
-              "sizemb": "0",
-              "filestoragesizemb": "0",
+              "sizemb": 0,
+              "filestoragesizemb": 0,
               "status": "Enabled",
               "maxaliases": 0,
               "maxdomainaliases": 0,
               "maxlists": 0,
-              "maxdomainsizeinmb": "10240",
+              "maxdomainsizeinmb": 10240,
               "maxdomainusers": 10,
-              "maxmailboxsizeinmb": 0,
               "maxmessagesize": 0,
               "maxrecipients": 0
             }
@@ -475,7 +472,7 @@
             },
             {
               "name": "maxmessagesize",
-              "description": "The maximum size a message can be on the domain. Pass 0 for unlimited.",
+              "description": "The maximum size (in KB) a message can be on the domain. Pass 0 for unlimited.",
               "required": false,
               "type": "integer",
               "paramType": "body"
@@ -626,7 +623,7 @@
               },
               {
               "name": "maxmessagesize",
-              "description": "The maximum size a message can be on the domain. Pass 0 for unlimited.",
+              "description": "The maximum size (in KB) a message can be on the domain. Pass 0 for unlimited.",
               "required": false,
               "type": "integer",
               "paramType": "body"
@@ -1110,11 +1107,11 @@
           "type": {
             "result": "ok",
             "data": {
-              "messagesreceived": "0",
-              "messagessent": "0",
-              "bytesreceived": "0",
-              "bytessent": "0",
-              "bytessize": "0"
+              "messagesreceived": 0,
+              "messagessent": 0,
+              "bytesreceived": 0,
+              "bytessent": 0,
+              "bytessize": 0
             }
           },
           "nickname": "getUserStats",
