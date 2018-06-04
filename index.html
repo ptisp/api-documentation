@@ -34,12 +34,6 @@
       docExpansion: "list"
     });
 
-    $('#input_apiKey').change(function() {
-      var key = $('#input_apiKey')[0].value.trim();
-      var email = $('#input_apiUsername')[0].value.trim();
-
-      window.authorizations.add("key", new ApiKeyAuthorization("Authorization", "Basic " + btoa(email+":"+key), "header"));
-    })
     window.swaggerUi.load();
   });
   </script>
@@ -49,10 +43,6 @@
 <div id='header'>
   <div class="swagger-ui-wrap">
     <a id="logo" href="https://www.ptisp.pt"></a>
-    <form id='api_selector'>
-      <div class='input'><input placeholder="Email" id="input_apiUsername" name="apiUsername" type="text"/></div>
-      <div class='input'><input placeholder="API hash" id="input_apiKey" name="apiKey" type="text"/></div>
-    </form>
   </div>
 </div>
 
