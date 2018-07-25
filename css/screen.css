@@ -1166,14 +1166,6 @@ table {
   background-color: #414142;
   padding: 14px;
 }
-#header a#logo {
-  font-size: 1.5em;
-  font-weight: bold;
-  text-decoration: none;
-  background: transparent url(../images/logo_small.png) no-repeat left center;
-  padding: 20px 0 20px 65px;
-  color: white;
-}
 #header form#api_selector {
   display: block;
   clear: none;
@@ -1223,4 +1215,15 @@ table {
   min-height: 30px;
   text-align: center;
   padding-top: 10px;
+}
+.table{
+  display: table;
+  width: 100%;
+}
+.cell{
+  display: table-cell;
+  vertical-align: middle;
+}
+#logo{
+  height: 30px;
 }
