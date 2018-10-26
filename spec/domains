@@ -185,7 +185,8 @@
           "notes": "",
           "type": {
             "result":"ok",
-            "available":"true"
+            "available":true,
+            "special":false
           },
           "nickname": "domainCheck",
           "consumes": [
