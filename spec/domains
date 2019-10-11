@@ -26,7 +26,22 @@
               ],
               "expires":"2013-03-01",
               "status":"ok",
-              "domain":"almouroltec.pt"
+              "domain":"almouroltec.pt",
+              "visible": "true",
+              "dnssec": [
+                {
+                    "key": "12636",
+                    "algorithm": "8",
+                    "digesttype": "2",
+                    "digest": "ce55ba36bb4de34e04211e69e649561b0bd7687874157ec8b262e10124dbec8d"
+                },
+                {
+                    "key": "12638",
+                    "algorithm": "8",
+                    "digesttype": "4",
+                    "digest": "faeac8b16738422e4fa82941a12bc9aabe24eb3814cf4550086bcdd10a9ed09120dad4427ea7d7cfce7aa26cd0520463"
+                }
+              ]
             }
           },
           "nickname": "domainInfo",
@@ -678,6 +693,110 @@
             {
               "code": 400,
               "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/domains/{domain}/dnssec",
+      "operations": [
+        {
+          "method": "POST",
+          "summary": "Set new DNSSEC key",
+          "notes": "",
+          "type": {
+              "result": "ok",
+              "message": "DNSSEC key set successfully"
+          },
+          "nickname": "setDNSSEC",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "key",
+              "description": "DNSSEC Key Tag",
+              "required": true,
+              "type": "integer",
+              "paramType": "body"
+            },
+            {
+              "name": "algorithm",
+              "description": "Number of the DNS Security algorithm used in the key generation.<br>Possible values available here: https://www.iana.org/assignments/dns-sec-alg-numbers/dns-sec-alg-numbers.xhtml",
+              "required": true,
+              "type": "integer",
+              "paramType": "body"
+            },
+            {
+              "name": "digesttype",
+              "description": "Number of the algorithm used in the DS.<br>Accepted values:<ul><li>1 (SHA-1);</li><li>2 (SHA-256);</li><li>3 (GOST R 34.11-94);</li><li>4 (SHA-384)</li></ul>",
+              "required": true,
+              "type": "integer",
+              "paramType": "body"
+            },
+            {
+              "name": "digest",
+              "description": "Key's digest",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"Object exists - There is already a DNSSEC with that KeyTag in that Domain.\"}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/domains/{domain}/dnssec",
+      "operations": [
+        {
+          "method": "DELETE",
+          "summary": "Removes an existing DNSSEC key",
+          "notes": "",
+          "type": {
+              "result": "ok",
+              "message": "DNSSEC key removed successfully"
+          },
+          "nickname": "deleteDNSSEC",
+          "authorizations": {},
+          "parameters": [
+            {
+              "name": "key",
+              "description": "DNSSEC Key Tag",
+              "required": true,
+              "type": "integer",
+              "paramType": "body"
+            },
+            {
+              "name": "algorithm",
+              "description": "Number of the DNS Security algorithm used in the key generation.<br>Possible values available here: https://www.iana.org/assignments/dns-sec-alg-numbers/dns-sec-alg-numbers.xhtml",
+              "required": true,
+              "type": "integer",
+              "paramType": "body"
+            },
+            {
+              "name": "digesttype",
+              "description": "Number of the algorithm used in the DS.<br>Accepted values:<ul><li>1 (SHA-1);</li><li>2 (SHA-256);</li><li>3 (GOST R 34.11-94);</li><li>4 (SHA-384)</li></ul>",
+              "required": true,
+              "type": "integer",
+              "paramType": "body"
+            },
+            {
+              "name": "digest",
+              "description": "Key's digest",
+              "required": true,
+              "type": "string",
+              "paramType": "body"
+            }
+          ],
+          "responseMessages": [
+            {
+              "code": 404,
+              "message": "{\"result\": \"nok\", \"message\": \"Object does not exist - There is no DNSSEC with that KeyTag.\"}"
             }
           ]
         }
