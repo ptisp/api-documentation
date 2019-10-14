@@ -292,15 +292,29 @@
               "paramType": "path"
             },
             {
-              "name": "ns/ns1",
-              "description": "Nameserver",
+              "name": "ns1",
+              "description": "Nameserver 1",
               "required": false,
               "type": "string",
               "paramType": "body"
             },
             {
               "name": "ns2",
-              "description": "Nameserver",
+              "description": "Nameserver 2",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "ns3",
+              "description": "Nameserver 3",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "ns4",
+              "description": "Nameserver 4",
               "required": false,
               "type": "string",
               "paramType": "body"
