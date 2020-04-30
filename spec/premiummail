@@ -235,14 +235,14 @@
             },
             {
               "name": "startdate",
-              "description": "Search period start, in Datetime format",
+              "description": "Search period start, in ISO-8601 UTC date time",
               "required": false,
               "type": "string",
               "paramType": "body"
             },
             {
               "name": "enddate",
-              "description": "Search period end, in Datetime format",
+              "description": "Search period end, in ISO-8601 UTC date time",
               "required": false,
               "type": "string",
               "paramType": "body"
@@ -1137,14 +1137,14 @@
             },
             {
               "name": "startdate",
-              "description": "Search period start, in Datetime format",
+              "description": "Search period start, in ISO-8601 UTC date time",
               "required": false,
               "type": "string",
               "paramType": "body"
             },
             {
               "name": "enddate",
-              "description": "Search period end, in Datetime format",
+              "description": "Search period end, in ISO-8601 UTC date time",
               "required": false,
               "type": "string",
               "paramType": "body"
@@ -1412,14 +1412,14 @@
             },
             {
               "name": "startdate",
-              "description": "Auto-response period start, in Datetime format",
+              "description": "Auto-response period start, in ISO-8601 UTC date time",
               "required": false,
               "type": "string",
               "paramType": "body"
             },
             {
               "name": "enddate",
-              "description": "Auto-response period end, in Datetime format",
+              "description": "Auto-response period end, in ISO-8601 UTC date time",
               "required": false,
               "type": "string",
               "paramType": "body"
