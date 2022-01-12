@@ -302,13 +302,6 @@
               "paramType": "body"
             },
             {
-              "name": "mail",
-              "description": "User Email",
-              "required": false,
-              "type": "string",
-              "paramType": "body"
-            },
-            {
               "name": "currency",
               "description": "Currency Used",
               "required": false,

@@ -47,7 +47,7 @@
   },
   "info": {
     "title": "PTisp API v2",
-    "description": "API uses basic authentication (email:api_hash), you may fetch your API Hash at <a href='https://my.ptisp.pt/#profile/hash'>https://my.ptisp.pt/#profile/hash</a>. All answers will use HTTP error codes accordingly and the 'result' field will always have 'ok' for successful operations and 'nok' otherwise. Posts support application/json and application/x-www-form-urlencoded types.",
+    "description": "API uses basic authentication (email:api_hash), you may fetch your API Hash at <a href='https://my.ptisp.pt/profile/apihash'>https://my.ptisp.pt/profile/apihash</a>. All answers will use HTTP error codes accordingly and the 'result' field will always have 'ok' for successful operations and 'nok' otherwise. Posts support application/json and application/x-www-form-urlencoded types.",
     "contact": "dev@ptisp.pt"
   }
 }
