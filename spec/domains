@@ -269,10 +269,12 @@
         {
           "method": "POST",
           "summary": "Register the specified domain",
-          "notes": "",
+          "notes": "Registers the specified domain. Use 'status' to check the outcome ('data' mirrors it for backward compatibility). A status of 'pending_contact_verification' means the registrar is awaiting registrant email verification before completing the registration. The registrant contact is resolved via one of three modes: Mode A — provide 'contact' with an existing DNS.PT NIC-handle (e.g. P-123456-FCCN); Mode B — provide contact detail fields (name, nif, address, city, postalcode, country, phone, mail; company optional); Mode C — if neither is supplied, the reseller account details are used as the registrant. 'contact' and detail fields are mutually exclusive.",
           "type": {
             "result":"ok",
-            "data":"registered"
+            "data":"registered",
+            "status":"registered",
+            "id":"123-456"
           },
           "nickname": "registerDomain",
           "authorizations": {},
@@ -320,15 +322,78 @@
               "paramType": "body"
             },
             {
+              "name": "name",
+              "description": "Registrant full name.",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "nif",
+              "description": "Registrant Tax ID/NIF.",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "address",
+              "description": "Registrant street address.",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "city",
+              "description": "Registrant city.",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "postalcode",
+              "description": "Registrant postal code.",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "country",
+              "description": "Registrant country (ISO 3166-1 alpha-2).",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "phone",
+              "description": "Registrant phone number.",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "mail",
+              "description": "Registrant email address.",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
+              "name": "company",
+              "description": "Registrant company name (optional).",
+              "required": false,
+              "type": "string",
+              "paramType": "body"
+            },
+            {
               "name": "contact",
-              "description": "Registrant nic-handle",
+              "description": "Registrant DNS.PT NIC-handle (e.g. P-123456-FCCN). Use either this or the contact detail fields above, not both.",
               "required": false,
               "type": "string",
               "paramType": "body"
             },
             {
               "name": "nichandle",
-              "description": "Tech contact nic-handle",
+              "description": "Technical NIC-handle. Defaults to the PTisp technical contact if not provided.",
               "required": false,
               "type": "string",
               "paramType": "body"
@@ -340,8 +405,32 @@
               "message": "{\"result\": \"nok\", \"message\": \"error ...\"}"
             },
             {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"credit balance not enough\"}"
+            },
+            {
+              "code": 500,
+              "message": "{\"result\": \"nok\", \"message\": \"2 letter domains not supported\"}"
+            },
+            {
               "code": 404,
               "message": "{\"result\": \"nok\", \"message\": \"tld not found\"}"
+            },
+            {
+              "code": 400,
+              "message": "{\"result\": \"nok\", \"message\": \"provide either contact or contact details, not both\"}"
+            },
+            {
+              "code": 400,
+              "message": "{\"result\": \"nok\", \"message\": \"missing contact details\"}"
+            },
+            {
+              "code": 400,
+              "message": "{\"result\": \"nok\", \"message\": \"There is no Registrant contact with that Nic-handle\"}"
+            },
+            {
+              "code": 400,
+              "message": "{\"result\": \"nok\", \"message\": \"There is no Tech contact with that Nic-handle\"}"
             }
           ]
         }
